@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job profit calculator | Margin and target price | ClearDesk IQ</title>
+<meta name="description" content="Free job profit calculator: enter the price and your costs to see profit, margin, the price you need for a target margin, and what happens if costs rise.">
+<meta name="theme-color" content="#10273f">
+<link rel="canonical" href="https://cleardeskiq.com/job-profit-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClearDesk IQ">
+<meta property="og:title" content="Job profit calculator | Margin and target price | ClearDesk IQ">
+<meta property="og:description" content="Free job profit calculator: enter the price and your costs to see profit, margin, the price you need for a target margin, and what happens if costs rise.">
+<meta property="og:url" content="https://cleardeskiq.com/job-profit-calculator.html">
+<meta property="og:image" content="https://cleardeskiq.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ClearDesk IQ: run your whole business from one place. One payment, no monthly fees.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Job profit calculator","description":"Free job profit calculator for contractors: profit, margin, target price and cost-rise check.","url":"https://cleardeskiq.com/job-profit-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any modern web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ClearDesk IQ","url":"https://cleardeskiq.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cleardeskiq.com/"},{"@type":"ListItem","position":2,"name":"Job profit calculator","item":"https://cleardeskiq.com/job-profit-calculator.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="ClearDesk IQ home"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk <span class="iq">IQ</span></a>
+    <nav class="nav" aria-label="Main"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="who-its-for.html">Who it's for</a><a href="help/index.html">Help center</a><a href="faq.html">FAQ</a></nav>
+    <a class="button button-store button-sm header-cta" href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener">Get it on the Microsoft Store</a>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="who-its-for.html">Who it's for</a><a href="help/index.html">Help center</a><a href="faq.html">FAQ</a><a href="download.html">Download</a><a href="contact.html">Contact &amp; support</a><a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get it on the Microsoft Store</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / Free job profit calculator</p>
+    <h1>Free job profit calculator</h1>
+    <p class="lead">Enter the price and your costs. See the profit, the margin, the price you need for your target margin, and what happens if costs rise.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <form id="jp-form" class="calc" onsubmit="return false">
+      <div class="card">
+        <h2 style="font-size:1.35rem">Your job</h2>
+        <div class="fields">
+          <div class="field" style="grid-column:1/-1"><label for="jp-price">Price you charge the customer ($)</label><input id="jp-price" type="number" inputmode="decimal" min="0" step="1" value="18500"></div>
+          <div class="field"><label for="jp-materials">Materials ($)</label><input id="jp-materials" type="number" inputmode="decimal" min="0" step="1" value="7200"></div>
+          <div class="field"><label for="jp-subs">Subcontractors ($)</label><input id="jp-subs" type="number" inputmode="decimal" min="0" step="1" value="4200"></div>
+          <div class="field"><label for="jp-hours">Labor hours</label><input id="jp-hours" type="number" inputmode="decimal" min="0" step="0.5" value="60"></div>
+          <div class="field"><label for="jp-rate">Labor cost per hour ($)</label><input id="jp-rate" type="number" inputmode="decimal" min="0" step="0.5" value="55"></div>
+          <div class="field"><label for="jp-other">Other job costs ($)</label><input id="jp-other" type="number" inputmode="decimal" min="0" step="1" value="350"></div>
+          <div class="field"><label for="jp-overhead">Overhead (% of direct costs)</label><input id="jp-overhead" type="number" inputmode="decimal" min="0" step="0.5" value="10"></div>
+          <div class="field"><label for="jp-target">Target margin (%)</label><input id="jp-target" type="number" inputmode="decimal" min="0" max="95" step="0.5" value="20"></div>
+          <div class="field"><label for="jp-rise">What if costs rise by (%)</label><input id="jp-rise" type="number" inputmode="decimal" min="0" step="1" value="10"></div>
+        </div>
+      </div>
+      <div class="card" aria-live="polite">
+        <h2 style="font-size:1.35rem">What it really makes</h2>
+        <p style="margin:0" class="small">Profit</p>
+        <p class="result-big" id="jp-profit">$1,945</p>
+        <p><span class="flag thin" id="jp-flag">Thin</span> &nbsp;Margin <strong id="jp-margin">10.5%</strong></p>
+        <ul class="result-list">
+          <li><span>Labor (hours &times; rate)</span><strong id="jp-labor">$3,300</strong></li>
+          <li><span>Direct costs</span><strong id="jp-direct">$15,050</strong></li>
+          <li><span>Overhead</span><strong id="jp-oh">$1,505</strong></li>
+          <li><span>Total cost</span><strong id="jp-total">$16,555</strong></li>
+          <li><span>Price for your target margin</span><strong id="jp-needed">$20,694</strong></li>
+          <li><span id="jp-rise-label">Profit if costs rise 10%</span><strong id="jp-rise-out">$290 (1.6% margin)</strong></li>
+        </ul>
+        <p class="small" style="margin-top:12px">Runs in your browser. Nothing you type is stored or sent. Example numbers are fictional.</p>
+      </div>
+    </form>
+  </div>
+</section>
+<section class="block soft">
+  <div class="container grid-2" style="gap:40px;align-items:start">
+    <div class="prose">
+      <h2>How the numbers work</h2>
+      <ul>
+        <li><strong>Direct costs</strong> are materials, labor, subcontractors and other job costs.</li>
+        <li><strong>Overhead</strong> is your overhead percentage of direct costs.</li>
+        <li><strong>Total cost</strong> is direct costs plus overhead. <strong>Profit</strong> is the price minus total cost.</li>
+        <li><strong>Margin</strong> is profit divided by price. It is not the same as markup.</li>
+        <li><strong>Price for a target margin</strong> is total cost divided by (1 minus the target margin).</li>
+      </ul>
+      <p><strong>Healthy</strong> means at or above your target margin. <strong>Thin</strong> means at least 10% but under your target. <strong>Underpriced</strong> means under 10% or a loss.</p>
+      <p class="small">Estimates only. Not tax, legal or accounting advice.</p>
+    </div>
+    <div class="card">
+      <h3>Do this for every job, automatically.</h3>
+      <p>ClearDesk IQ builds the estimate from your costs, shows the margin before you send it, and keeps forecasting the profit as real costs come in.</p>
+      <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get it on the Microsoft Store</a></div>
+      <p class="cta-note">$79.99 one time. No monthly fees.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk IQ</p>
+        <p>Run your small business from one place. Not accounting software: a complete business management system. One payment. No monthly fees.</p>
+        <p class="small" style="color:#9fb4c7">For contractors: Windows 10 and 11 &middot; $79.99 one time on the Microsoft Store<br>Restaurant Edition: coming soon</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="contractors/index.html">For contractors</a></li>
+          <li><a href="restaurants/index.html">For restaurants</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="job-profit-calculator.html">Free job profit calculator</a></li>
+          <li><a href="markup-vs-margin-calculator.html">Free markup vs margin calculator</a></li>
+          <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
+          <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="help/index.html">Help center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact &amp; support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener">Get it on the Microsoft Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-fine">ClearDesk IQ helps you run the business side of your work. It is not tax, legal or accounting advice. Screens show fictional example data. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies. &copy; 2026 ClearDesk IQ.</p>
+  </div>
+</footer>
+<script src="assets/js/calc.js" defer></script>
+</body>
+</html>

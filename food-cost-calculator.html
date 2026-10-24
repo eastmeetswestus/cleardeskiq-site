@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant food cost calculator, free | plate cost | ClearDesk IQ</title>
+<meta name="description" content="Free restaurant food cost calculator: enter ingredients and prices to get plate cost, food cost % and the price for your target. Runs in your browser.">
+<meta name="theme-color" content="#10273f">
+<link rel="canonical" href="https://cleardeskiq.com/food-cost-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClearDesk IQ">
+<meta property="og:title" content="Restaurant food cost calculator, free | plate cost | ClearDesk IQ">
+<meta property="og:description" content="Free restaurant food cost calculator: enter ingredients and prices to get plate cost, food cost % and the price for your target. Runs in your browser.">
+<meta property="og:url" content="https://cleardeskiq.com/food-cost-calculator.html">
+<meta property="og:image" content="https://cleardeskiq.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ClearDesk IQ: run your whole business from one place. One payment, no monthly fees.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Restaurant food cost calculator","description":"Free calculator for plate cost, food cost percent, margin and the price to hit a target food cost.","url":"https://cleardeskiq.com/food-cost-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any modern web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ClearDesk IQ","url":"https://cleardeskiq.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cleardeskiq.com/"},{"@type":"ListItem","position":2,"name":"Restaurants","item":"https://cleardeskiq.com/restaurants/"},{"@type":"ListItem","position":3,"name":"Food cost calculator","item":"https://cleardeskiq.com/food-cost-calculator.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="ClearDesk IQ home"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk <span class="iq">IQ</span></a>
+    <nav class="nav" aria-label="Main"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="who-its-for.html">Who it's for</a><a href="help/index.html">Help center</a><a href="faq.html">FAQ</a></nav>
+    <a class="button button-store button-sm header-cta" href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener">Get it on the Microsoft Store</a>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="who-its-for.html">Who it's for</a><a href="help/index.html">Help center</a><a href="faq.html">FAQ</a><a href="download.html">Download</a><a href="contact.html">Contact &amp; support</a><a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get it on the Microsoft Store</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="restaurants/index.html">Restaurants</a> / Food cost calculator</p>
+    <h1>Restaurant food cost calculator</h1>
+    <p class="lead">Enter one dish: what goes in it, what you paid for each ingredient, and the selling price. See the plate cost, food cost %, margin, and the price that hits your target. Free, runs in your browser, and needs no sign-up.</p>
+    <p class="small">A free calculator. It is not the Restaurant Edition, which is <a href="restaurants/index.html">coming soon</a>.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <form id="fc-form" class="calc-form" onsubmit="return false">
+      <div class="calc calc-top">
+        <div class="card">
+          <h2 class="h-sm">Your dish</h2>
+          <div class="fields">
+            <div class="field"><label for="fc-name">Dish name (optional)</label><input id="fc-name" type="text" maxlength="60" value="Chicken rice bowl"></div>
+            <div class="field"><label for="fc-price">Selling price ($)</label><input id="fc-price" type="text" inputmode="decimal" min="0" step="0.01" value="14"></div>
+            <div class="field"><label for="fc-portions">Portions the recipe makes</label><input id="fc-portions" type="text" inputmode="numeric" min="1" step="1" value="1"></div>
+            <div class="field"><label for="fc-target">Target food cost (%)</label><input id="fc-target" type="text" inputmode="decimal" min="1" max="99" step="0.5" value="30"></div>
+            <div class="field"><label for="fc-extras">Flat costs per plate ($): sauce, garnish, container, oil</label><input id="fc-extras" type="text" inputmode="decimal" min="0" step="0.01" value="0.60"></div>
+            <div class="field"><label for="fc-round">Round the target price</label><select id="fc-round"><option value="0">To the exact cent</option><option value="0.25">Up to the next $0.25</option><option value="0.5">Up to the next $0.50</option></select></div>
+            <div class="field"><label for="fc-units">Units sold per week (optional)</label><input id="fc-units" type="text" inputmode="numeric" min="0" step="1" value=""></div>
+          </div>
+        </div>
+        <div class="card" aria-live="polite">
+          <h2 class="h-sm">What the dish makes</h2>
+          <p class="small" style="margin:0">Plate cost</p>
+          <p class="result-big" id="fc-plate">$0.00</p>
+          <p><span class="flag thin" id="fc-status">Enter a selling price</span></p>
+          <ul class="result-list">
+            <li><span>Food cost %</span><strong id="fc-pct">n/a</strong></li>
+            <li><span>Margin per plate</span><strong id="fc-margin">n/a</strong></li>
+            <li><span>Price to hit your target</span><strong id="fc-target-price">n/a</strong></li>
+            <li><span>Weekly food cost</span><strong id="fc-week-cost">Enter units sold</strong></li>
+            <li><span>Weekly sales</span><strong id="fc-week-sales">Enter units sold</strong></li>
+          </ul>
+          <h3 class="h-sm" style="margin-top:18px">Largest costs on one plate</h3>
+          <ol class="top-costs" id="fc-top"><li><span>Add ingredients below</span></li></ol>
+          <div id="fc-msgs" class="msgs" role="status"></div>
+          <button type="button" class="button button-ghost button-sm print-btn" onclick="window.print()">Print or save as PDF</button>
+        </div>
+      </div>
+      <div class="card" style="margin-top:24px">
+        <h2 class="h-sm">Ingredients</h2>
+        <p class="small">Leave a row empty to skip it. Use the same kind of unit for the amount and the pack: weight with weight (oz, lb, g, kg), volume with volume (fl oz, cup), or each with each. Digits and one point for decimals, such as 1.50; commas are not read. Yield is the share you keep after trim and waste.</p>
+        <div class="ing-head" aria-hidden="true"><span>Ingredient</span><span>Amount used</span><span>Unit</span><span>Price paid</span><span>Amount paid for</span><span>Pack unit</span><span>Yield %</span></div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i1-name">Ingredient 1</label><input id="fc-i1-name" type="text" maxlength="40" value="Chicken" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i1-qty">Amount used</label><input id="fc-i1-qty" type="text" inputmode="decimal" min="0" step="0.01" value="8"></div>
+        <div class="field"><label for="fc-i1-unit">Unit used</label><select id="fc-i1-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i1-price">Price paid ($)</label><input id="fc-i1-price" type="text" inputmode="decimal" min="0" step="0.01" value="3.5"></div>
+        <div class="field"><label for="fc-i1-pack">Amount you paid for</label><input id="fc-i1-pack" type="text" inputmode="decimal" min="0" step="0.01" value="1"></div>
+        <div class="field"><label for="fc-i1-punit">Pack unit</label><select id="fc-i1-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i1-yield">Yield %</label><input id="fc-i1-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i2-name">Ingredient 2</label><input id="fc-i2-name" type="text" maxlength="40" value="Rice" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i2-qty">Amount used</label><input id="fc-i2-qty" type="text" inputmode="decimal" min="0" step="0.01" value="4"></div>
+        <div class="field"><label for="fc-i2-unit">Unit used</label><select id="fc-i2-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i2-price">Price paid ($)</label><input id="fc-i2-price" type="text" inputmode="decimal" min="0" step="0.01" value="1.2"></div>
+        <div class="field"><label for="fc-i2-pack">Amount you paid for</label><input id="fc-i2-pack" type="text" inputmode="decimal" min="0" step="0.01" value="1"></div>
+        <div class="field"><label for="fc-i2-punit">Pack unit</label><select id="fc-i2-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i2-yield">Yield %</label><input id="fc-i2-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i3-name">Ingredient 3</label><input id="fc-i3-name" type="text" maxlength="40" value="Vegetables" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i3-qty">Amount used</label><input id="fc-i3-qty" type="text" inputmode="decimal" min="0" step="0.01" value="5"></div>
+        <div class="field"><label for="fc-i3-unit">Unit used</label><select id="fc-i3-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i3-price">Price paid ($)</label><input id="fc-i3-price" type="text" inputmode="decimal" min="0" step="0.01" value="2.4"></div>
+        <div class="field"><label for="fc-i3-pack">Amount you paid for</label><input id="fc-i3-pack" type="text" inputmode="decimal" min="0" step="0.01" value="1"></div>
+        <div class="field"><label for="fc-i3-punit">Pack unit</label><select id="fc-i3-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i3-yield">Yield %</label><input id="fc-i3-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i4-name">Ingredient 4</label><input id="fc-i4-name" type="text" maxlength="40" value="" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i4-qty">Amount used</label><input id="fc-i4-qty" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i4-unit">Unit used</label><select id="fc-i4-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i4-price">Price paid ($)</label><input id="fc-i4-price" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i4-pack">Amount you paid for</label><input id="fc-i4-pack" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i4-punit">Pack unit</label><select id="fc-i4-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i4-yield">Yield %</label><input id="fc-i4-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i5-name">Ingredient 5</label><input id="fc-i5-name" type="text" maxlength="40" value="" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i5-qty">Amount used</label><input id="fc-i5-qty" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i5-unit">Unit used</label><select id="fc-i5-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i5-price">Price paid ($)</label><input id="fc-i5-price" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i5-pack">Amount you paid for</label><input id="fc-i5-pack" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i5-punit">Pack unit</label><select id="fc-i5-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i5-yield">Yield %</label><input id="fc-i5-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i6-name">Ingredient 6</label><input id="fc-i6-name" type="text" maxlength="40" value="" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i6-qty">Amount used</label><input id="fc-i6-qty" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i6-unit">Unit used</label><select id="fc-i6-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i6-price">Price paid ($)</label><input id="fc-i6-price" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i6-pack">Amount you paid for</label><input id="fc-i6-pack" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i6-punit">Pack unit</label><select id="fc-i6-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i6-yield">Yield %</label><input id="fc-i6-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i7-name">Ingredient 7</label><input id="fc-i7-name" type="text" maxlength="40" value="" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i7-qty">Amount used</label><input id="fc-i7-qty" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i7-unit">Unit used</label><select id="fc-i7-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i7-price">Price paid ($)</label><input id="fc-i7-price" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i7-pack">Amount you paid for</label><input id="fc-i7-pack" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i7-punit">Pack unit</label><select id="fc-i7-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i7-yield">Yield %</label><input id="fc-i7-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+
+      <div class="ing-row">
+        <div class="field"><label for="fc-i8-name">Ingredient 8</label><input id="fc-i8-name" type="text" maxlength="40" value="" placeholder="for example, chicken"></div>
+        <div class="field"><label for="fc-i8-qty">Amount used</label><input id="fc-i8-qty" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i8-unit">Unit used</label><select id="fc-i8-unit"><option value="oz" selected>oz</option><option value="lb">lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i8-price">Price paid ($)</label><input id="fc-i8-price" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i8-pack">Amount you paid for</label><input id="fc-i8-pack" type="text" inputmode="decimal" min="0" step="0.01" value=""></div>
+        <div class="field"><label for="fc-i8-punit">Pack unit</label><select id="fc-i8-punit"><option value="oz">oz</option><option value="lb" selected>lb</option><option value="g">g</option><option value="kg">kg</option><option value="fl oz">fl oz</option><option value="cup">cup</option><option value="each">each</option></select></div>
+        <div class="field"><label for="fc-i8-yield">Yield %</label><input id="fc-i8-yield" type="text" inputmode="decimal" min="0" max="100" step="0.5" value="100"></div>
+      </div>
+      </div>
+      <p class="small" style="margin-top:14px">Estimates only, from the numbers you enter. Not tax, legal or accounting advice. Example numbers are fictional. Food cost counts ingredients and flat costs only. Labor and rent are not in this number; use the <a href="prime-cost-calculator.html">prime cost calculator</a> for labor.</p>
+    </form>
+  </div>
+</section>
+<section class="block soft">
+  <div class="container grid-2" style="gap:40px;align-items:start">
+    <div class="prose">
+      <h2>How the numbers work</h2>
+      <ul>
+        <li><strong>Usable cost</strong> of an ingredient = amount used, at the price you paid per unit, divided by the yield (for example, 85% yield means you keep 85% of what you buy).</li>
+        <li><strong>Plate cost</strong> = the sum of the usable ingredient costs, divided by the portions the recipe makes, plus the flat costs per plate.</li>
+        <li><strong>Food cost %</strong> = plate cost divided by the selling price, times 100.</li>
+        <li><strong>Margin per plate</strong> = selling price minus plate cost.</li>
+        <li><strong>Price to hit your target</strong> = plate cost divided by your target food cost %, optionally rounded up.</li>
+      </ul>
+      <h2>A worked example</h2>
+      <p>The example above: chicken 8 oz at $3.50 per lb ($1.75), rice 4 oz at $1.20 per lb ($0.30), vegetables 5 oz at $2.40 per lb ($0.75), and $0.60 of sauce, garnish and container. Plate cost is $3.40. At a $14.00 price, food cost is 24.29% and the margin is $10.60. To hit 30%, the price is $11.33.</p>
+      <h2>What this does not count</h2>
+      <ul>
+        <li>Labor, rent, utilities and insurance.</li>
+        <li>Waste you do not record as yield loss, and spills or comped plates.</li>
+        <li>Sales tax and card fees.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Want this every week, without a spreadsheet?</h3>
+      <p>The Restaurant Edition is planned to keep plate cost, food cost % and prime cost in one Windows app, with vendor price changes. It is coming soon, with no release date yet.</p>
+      <div class="button-row"><a class="button button-ghost" href="mailto:summitechconsulting@gmail.com?subject=Restaurant%20Edition%20launch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>Get notified at launch</a><a class="button button-ghost" href="restaurants/index.html">What is planned</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk IQ</p>
+        <p>Run your small business from one place. Not accounting software: a complete business management system. One payment. No monthly fees.</p>
+        <p class="small" style="color:#9fb4c7">For contractors: Windows 10 and 11 &middot; $79.99 one time on the Microsoft Store<br>Restaurant Edition: coming soon</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="contractors/index.html">For contractors</a></li>
+          <li><a href="restaurants/index.html">For restaurants</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="job-profit-calculator.html">Free job profit calculator</a></li>
+          <li><a href="markup-vs-margin-calculator.html">Free markup vs margin calculator</a></li>
+          <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
+          <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="help/index.html">Help center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact &amp; support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PL41B197M7R" rel="noopener">Get it on the Microsoft Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-fine">ClearDesk IQ helps you run the business side of your work. It is not tax, legal or accounting advice. Screens show fictional example data. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies. &copy; 2026 ClearDesk IQ.</p>
+  </div>
+</footer>
+<script src="assets/js/tools.js" defer></script>
+</body>
+</html>
