@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Truck Break-Even Calculator | ClearDesk IQ</title>
+<meta name="description" content="Food truck break even calculator: orders a day and service hours to cover fixed costs, from your average sale and food cost. Free, in your browser.">
+<meta name="theme-color" content="#10273f">
+<link rel="canonical" href="https://cleardeskiq.com/food-truck-break-even-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClearDesk IQ">
+<meta property="og:title" content="Food Truck Break-Even Calculator | ClearDesk IQ">
+<meta property="og:description" content="Food truck break even calculator: orders a day and service hours to cover fixed costs, from your average sale and food cost. Free, in your browser.">
+<meta property="og:url" content="https://cleardeskiq.com/food-truck-break-even-calculator.html">
+<meta property="og:image" content="https://cleardeskiq.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ClearDesk IQ: run your whole business from one place. One payment, no monthly fees.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Food Truck Break-Even Calculator","description":"Food truck break even calculator: orders a day and service hours to cover fixed costs, from your average sale and food cost. Free, in your browser.","url":"https://cleardeskiq.com/food-truck-break-even-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any modern web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ClearDesk IQ","url":"https://cleardeskiq.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cleardeskiq.com/"},{"@type":"ListItem","position":2,"name":"Free calculators","item":"https://cleardeskiq.com/calculators/"},{"@type":"ListItem","position":3,"name":"Food truck break-even calculator","item":"https://cleardeskiq.com/food-truck-break-even-calculator.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="ClearDesk IQ home"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk <span class="iq">IQ</span></a>
+    <nav class="nav" aria-label="Main"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="calculators/index.html" aria-current="page">Free calculators</a><a href="pricing.html">Pricing</a><a href="help/index.html">Help</a></nav>
+    <a class="button button-store button-sm header-cta" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-breakeven" rel="noopener">Get it on the Microsoft Store</a>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="calculators/index.html" aria-current="page">Free calculators</a><a href="pricing.html">Pricing</a><a href="help/index.html">Help</a><a href="download.html">Download</a><a href="contact.html">Contact &amp; support</a><a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-breakeven" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get it on the Microsoft Store</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="calculators/index.html">Free calculators</a> / Food truck break-even calculator</p>
+    <h1>Food Truck Break-Even Calculator</h1>
+    <p class="lead">Break-even is the number of orders that covers your fixed costs for the month. Each order adds its sale minus food, packaging and card fees. Enter your monthly fixed costs and your per-order numbers to see the orders you need a day and the hours that takes at your pace. Free, runs in your browser, no sign-up.</p>
+    <div class="card answer" style="margin-top:18px">
+      <p style="margin:0 0 10px"><strong>Formula.</strong> Contribution per order = average sale minus food and packaging per order minus card and delivery fees. Break-even orders a month = fixed costs a month divided by the contribution per order. Orders a day = that figure divided by open days.</p>
+      <p style="margin:0"><strong>Example.</strong> Fixed costs $6,000 a month, average sale $12, food and packaging $3.80, fees 3%. Contribution is $7.84 an order, so break-even is 766 orders a month, about 30 a day. At 6 orders an hour that is 5 hours of service a day.</p>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <form id="ftb-form" class="calc" onsubmit="return false">
+      <div class="card">
+        <h2 class="h-sm">Your costs</h2>
+        <div class="fields">
+<div class="field"><label for="ftb-fixed">Fixed costs per month ($): truck payment, insurance, permits, commissary</label><input id="ftb-fixed" type="number" inputmode="decimal" min="0" step="any" value="6000"></div>
+<div class="field"><label for="ftb-var">Food and packaging per order ($)</label><input id="ftb-var" type="number" inputmode="decimal" min="0" step="any" value="3.8"></div>
+<div class="field"><label for="ftb-fee">Card and delivery fees (% of sales)</label><input id="ftb-fee" type="number" inputmode="decimal" min="0" step="any" value="3"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="h-sm">Your sales</h2>
+        <div class="fields">
+<div class="field"><label for="ftb-sale">Average sale per order ($), before sales tax</label><input id="ftb-sale" type="number" inputmode="decimal" min="0" step="any" value="12"></div>
+<div class="field"><label for="ftb-days">Open days per month</label><input id="ftb-days" type="number" inputmode="decimal" min="0" step="any" value="26"></div>
+<div class="field"><label for="ftb-hours">Hours open per day</label><input id="ftb-hours" type="number" inputmode="decimal" min="0" step="any" value="8"></div>
+<div class="field"><label for="ftb-perhour">Orders you expect per hour while open</label><input id="ftb-perhour" type="number" inputmode="decimal" min="0" step="any" value="6"></div>
+        </div>
+      </div>
+      <div class="card" aria-live="polite">
+        <h2 class="h-sm">Break-even for the day</h2>
+        <p class="small" style="margin:0">Break-even orders a day</p>
+        <p class="result-big" id="ftb-big">n/a</p>
+        <p style="margin:6px 0 12px"><span class="flag thin" id="ftb-flag">Enter numbers</span></p>
+        <ul class="result-list">
+          <li><span>Contribution per order</span><strong id="ftb-contrib">n/a</strong></li>
+          <li><span>Break-even orders a month</span><strong id="ftb-month">n/a</strong></li>
+          <li><span>Break-even sales a month</span><strong id="ftb-sales">n/a</strong></li>
+          <li><span>Hours of service needed a day</span><strong id="ftb-hours-out">n/a</strong></li>
+        </ul>
+        <div class="side-cta result-cta">
+          <p class="small result-cta-line" id="ftb-cta">Enter your fixed costs and your average sale to see break-even.</p>
+          <a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-breakeven" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a>
+        </div>
+        <div id="ftb-msgs" class="msgs" role="status"></div>
+        <button type="button" class="button button-ghost button-sm print-btn no-print" onclick="window.print()">Save as PDF or print</button>
+        <p class="print-only">Printed from https://cleardeskiq.com/food-truck-break-even-calculator.html. Estimates only, from the numbers entered. Not tax, legal or accounting advice.</p>
+      </div>
+    </form>
+    <p class="small" style="margin-top:14px">Estimates only, from the numbers you enter. Not tax, legal or accounting advice. Example numbers are fictional.</p>
+  </div>
+</section>
+<section class="block soft">
+  <div class="container grid-2" style="gap:40px;align-items:start">
+    <div class="prose">
+      <h2>How the numbers work</h2>
+      <ul>
+        <li>Contribution per order is what each order adds toward fixed costs after food, packaging and fees.</li>
+        <li>Orders are rounded up to whole orders. Break-even sales = break-even orders times the average sale.</li>
+        <li>Hours of service = orders a day divided by the orders you expect per hour. If that is more than the hours you are open, the day cannot break even at that pace.</li>
+        <li>If the contribution is zero or negative, no number of orders covers fixed costs.</li>
+      </ul>
+      <h2>What this does not count</h2>
+      <ul>
+        <li>Your own pay, unless you put it in the fixed costs.</li>
+        <li>Waste, comps, spoilage and food you give away, beyond the per-order food cost you enter.</li>
+        <li>Sales tax. Enter the sale before tax.</li>
+        <li>Seasonal swings, events and catering.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Track food cost and profit per plate</h3>
+      <p>ClearDesk IQ Restaurant Edition tracks food cost %, prime cost % and profit per plate for each sales period, and it keeps vendor bills and price history in one Windows app. Sold on the Microsoft Store.</p>
+      <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-breakeven" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a></div>
+    </div>
+  </div>
+</section>
+<section class="block soft calc-faq-wrap">
+  <div class="container narrow prose calc-faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is break-even for a food truck?</summary><p>Break-even is the number of orders that covers all fixed costs for a month. Below it you lose money after fixed costs; above it the profit from each order pays for the truck, insurance and permits.</p></details>
+    <details><summary>Which costs are fixed?</summary><p>Costs that do not change with each order: the truck payment or lease, insurance, permits and license fees, commissary rent, and phone or software. Add owner pay if you want the truck to cover it.</p></details>
+    <details><summary>Which average sale should I use?</summary><p>Use your average check over a typical week. Run the calculator again with your best and slowest weeks to see the range.</p></details>
+    <details><summary>How do I enter card and delivery fees?</summary><p>As a percent of sales. A 3% fee on a $12 sale is $0.36, which the calculator subtracts from the contribution.</p></details>
+    <details><summary>What if the contribution is zero or negative?</summary><p>Then each order does not cover its own food, packaging and fees, and no number of orders covers fixed costs. Raise the price, lower the food cost per order, or change the menu before you add days.</p></details>
+    <details><summary>How many hours do I need?</summary><p>Hours needed = daily break-even orders divided by the orders you expect each hour. If that is more than the hours you are open, the day needs a higher price, lower costs or more sales per hour.</p></details>
+    <details><summary>Does ClearDesk IQ Restaurant calculate break-even?</summary><p>This calculator gives the break-even figure. The Restaurant Edition tracks food cost %, prime cost % and profit per plate for each sales period, so you can check the food and labor side against your sales.</p></details>
+    <details><summary>Are the numbers I type stored or sent?</summary><p>No. The page runs in your browser. Nothing you type is stored or sent.</p></details>
+  </div>
+</section>
+<section class="block tight calc-related">
+  <div class="container">
+    <p class="small"><strong>Related free calculators:</strong> <a href="menu-price-calculator.html">Menu price calculator</a> &middot; <a href="food-cost-calculator.html">Food cost per plate calculator</a> &middot; <a href="prime-cost-calculator.html">Prime cost calculator</a> &middot; <a href="calculators/index.html">All free calculators</a></p>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is break-even for a food truck?","acceptedAnswer":{"@type":"Answer","text":"Break-even is the number of orders that covers all fixed costs for a month. Below it you lose money after fixed costs; above it the profit from each order pays for the truck, insurance and permits."}},{"@type":"Question","name":"Which costs are fixed?","acceptedAnswer":{"@type":"Answer","text":"Costs that do not change with each order: the truck payment or lease, insurance, permits and license fees, commissary rent, and phone or software. Add owner pay if you want the truck to cover it."}},{"@type":"Question","name":"Which average sale should I use?","acceptedAnswer":{"@type":"Answer","text":"Use your average check over a typical week. Run the calculator again with your best and slowest weeks to see the range."}},{"@type":"Question","name":"How do I enter card and delivery fees?","acceptedAnswer":{"@type":"Answer","text":"As a percent of sales. A 3% fee on a $12 sale is $0.36, which the calculator subtracts from the contribution."}},{"@type":"Question","name":"What if the contribution is zero or negative?","acceptedAnswer":{"@type":"Answer","text":"Then each order does not cover its own food, packaging and fees, and no number of orders covers fixed costs. Raise the price, lower the food cost per order, or change the menu before you add days."}},{"@type":"Question","name":"How many hours do I need?","acceptedAnswer":{"@type":"Answer","text":"Hours needed = daily break-even orders divided by the orders you expect each hour. If that is more than the hours you are open, the day needs a higher price, lower costs or more sales per hour."}},{"@type":"Question","name":"Does ClearDesk IQ Restaurant calculate break-even?","acceptedAnswer":{"@type":"Answer","text":"This calculator gives the break-even figure. The Restaurant Edition tracks food cost %, prime cost % and profit per plate for each sales period, so you can check the food and labor side against your sales."}},{"@type":"Question","name":"Are the numbers I type stored or sent?","acceptedAnswer":{"@type":"Answer","text":"No. The page runs in your browser. Nothing you type is stored or sent."}}]}</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk IQ</p>
+        <p>Run your small business from one place. A business money-and-time tool: a complete business management system. One payment. No monthly fees.</p>
+        <p class="small" style="color:#9fb4c7">For contractors: Windows 10 and 11 &middot; $79.99 one time on the Microsoft Store<br>Restaurant Edition: on the Microsoft Store</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="contractors/index.html">For contractors</a></li>
+          <li><a href="restaurants/index.html">For restaurants</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="calculators/index.html">All free calculators</a></li>
+          <li><a href="markup-vs-margin-calculator.html">Free markup vs margin calculator</a></li>
+          <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
+          <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
+          <li><a href="job-profitability-calculator.html">Free job profitability calculator</a></li>
+          <li><a href="estimate-vs-actual-job-profit-calculator.html">Free estimate vs actual job cost calculator</a></li>
+          <li><a href="change-order-price-calculator.html">Free change order pricing calculator</a></li>
+          <li><a href="contractor-hourly-rate-calculator.html">Free contractor hourly rate calculator</a></li>
+          <li><a href="food-truck-break-even-calculator.html">Free food truck break-even calculator</a></li>
+          <li><a href="menu-price-calculator.html">Free menu price calculator</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="help/index.html">Help center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact &amp; support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-breakeven" rel="noopener">Get it on the Microsoft Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-fine">ClearDesk IQ helps you run the business side of your work. It is not tax, legal or accounting advice. Screens show fictional example data. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies. &copy; 2026 ClearDesk IQ.</p>
+  </div>
+</footer>
+<script src="assets/js/calc-wave1.js" defer></script>
+</body>
+</html>

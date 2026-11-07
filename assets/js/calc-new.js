@@ -63,7 +63,7 @@
     var r = Math.round(Math.abs(n)).toLocaleString('en-US');
     return (n < 0 && Math.round(n) !== 0 ? '-$' : '$') + r;
   }
-  function pct(n) { return isFinite(n) ? (Math.round(n * 10) / 10).toFixed(1) + '%' : 'n/a'; }
+  function pct(n) { if (!isFinite(n)) return 'n/a'; var a = Math.round(Math.abs(n) * 10 + 1e-9) / 10; return (n < 0 && a > 0 ? '-' : '') + a.toFixed(1) + '%'; }
   function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
   function flag(id, st) {
     var el = document.getElementById(id); if (!el) return;
@@ -107,7 +107,15 @@
     set(p + '-direct', money(r.direct));
     set(p + '-oh', money(r.overhead));
     set(p + '-total', money(r.total));
-    set(p + '-needed', targetPct < TARGET_MAX ? money(r.needed) : 'Set a target under 95%');
+    set(p + '-needed', targetPct < TARGET_MAX ? money(Math.ceil(r.needed - 1e-9)) : 'Set a target under 95%');
+    if (p === 'jpf') set('jpf-cta', jobCta(r));
+  }
+
+  function jobCta(r) {
+    if (!isFinite(r.marginPct)) return 'Enter a price to see what the job keeps.';
+    return r.profit >= 0
+      ? 'This job kept ' + money(r.profit) + ' (' + pct(r.marginPct) + ' margin). ClearDesk IQ tracks profit and margin for every job you run in the app.'
+      : 'At these costs this job loses ' + money(-r.profit) + '. ClearDesk IQ tracks profit and margin for every job you run in the app.';
   }
 
   function bind(formId, fn) {

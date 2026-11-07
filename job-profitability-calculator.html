@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Job Profitability Calculator: Free, No Sign-Up | ClearDesk IQ</title>
-<meta name="description" content="Free job profitability calculator: enter price, materials, labor and overhead to see profit and margin. Runs in your browser. Nothing is stored.">
+<title>Job Profitability Calculator: Job Margin | ClearDesk IQ</title>
+<meta name="description" content="Job profitability calculator with job margin: price, materials, labor and overhead give profit, margin and the price for a target. Free, in your browser.">
 <meta name="theme-color" content="#10273f">
 <link rel="canonical" href="https://cleardeskiq.com/job-profitability-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ClearDesk IQ">
-<meta property="og:title" content="Job Profitability Calculator: Free, No Sign-Up | ClearDesk IQ">
-<meta property="og:description" content="Free job profitability calculator: enter price, materials, labor and overhead to see profit and margin. Runs in your browser. Nothing is stored.">
+<meta property="og:title" content="Job Profitability Calculator: Job Margin | ClearDesk IQ">
+<meta property="og:description" content="Job profitability calculator with job margin: price, materials, labor and overhead give profit, margin and the price for a target. Free, in your browser.">
 <meta property="og:url" content="https://cleardeskiq.com/job-profitability-calculator.html">
 <meta property="og:image" content="https://cleardeskiq.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -43,8 +43,8 @@
 <section class="page-head">
   <div class="container">
     <p class="crumbs"><a href="index.html">Home</a> / Job profitability calculator</p>
-    <h1>Job Profitability Calculator</h1>
-    <p class="lead">Job profitability is what a job keeps after every cost: labor, materials, subcontractors, other job costs and overhead. Enter the price and your costs to see the profit, the margin, and the price your target margin needs. Free, runs in your browser, no sign-up.</p>
+    <h1>Job Profitability and Job Margin Calculator</h1>
+    <p class="lead">Job profitability is what a job keeps after every cost: labor, materials, subcontractors, other job costs and overhead. Job margin is profit divided by price. Enter the price and your costs to see the profit, the job margin, and the price your target margin needs. Free, runs in your browser, no sign-up.</p>
   </div>
 </section>
 <section class="block">
@@ -53,14 +53,14 @@
       <div class="card">
         <h2 style="font-size:1.35rem">Your job</h2>
         <div class="fields">
-<div class="field"><label for="jpf-price">Price you charge the customer ($)</label><input id="jpf-price" type="number" inputmode="decimal" min="0" step="1" value="18500"></div>
-<div class="field"><label for="jpf-materials">Materials ($)</label><input id="jpf-materials" type="number" inputmode="decimal" min="0" step="1" value="7200"></div>
-<div class="field"><label for="jpf-subs">Subcontractors ($)</label><input id="jpf-subs" type="number" inputmode="decimal" min="0" step="1" value="4200"></div>
-<div class="field"><label for="jpf-hours">Labor hours</label><input id="jpf-hours" type="number" inputmode="decimal" min="0" step="0.5" value="60"></div>
-<div class="field"><label for="jpf-rate">Labor cost per hour ($)</label><input id="jpf-rate" type="number" inputmode="decimal" min="0" step="0.5" value="55"></div>
-<div class="field"><label for="jpf-other">Other job costs ($)</label><input id="jpf-other" type="number" inputmode="decimal" min="0" step="1" value="350"></div>
-<div class="field"><label for="jpf-overhead">Overhead (% of direct costs)</label><input id="jpf-overhead" type="number" inputmode="decimal" min="0" step="0.5" value="10"></div>
-<div class="field"><label for="jpf-target">Target margin (%)</label><input id="jpf-target" type="number" inputmode="decimal" min="0" step="0.5" value="20"></div>
+<div class="field"><label for="jpf-price">Price you charge the customer ($)</label><input id="jpf-price" type="number" inputmode="decimal" min="0" step="any" value="18500"></div>
+<div class="field"><label for="jpf-materials">Materials ($)</label><input id="jpf-materials" type="number" inputmode="decimal" min="0" step="any" value="7200"></div>
+<div class="field"><label for="jpf-subs">Subcontractors ($)</label><input id="jpf-subs" type="number" inputmode="decimal" min="0" step="any" value="4200"></div>
+<div class="field"><label for="jpf-hours">Labor hours</label><input id="jpf-hours" type="number" inputmode="decimal" min="0" step="any" value="60"></div>
+<div class="field"><label for="jpf-rate">Labor cost per hour ($)</label><input id="jpf-rate" type="number" inputmode="decimal" min="0" step="any" value="55"></div>
+<div class="field"><label for="jpf-other">Other job costs ($)</label><input id="jpf-other" type="number" inputmode="decimal" min="0" step="any" value="350"></div>
+<div class="field"><label for="jpf-overhead">Overhead (% of direct costs)</label><input id="jpf-overhead" type="number" inputmode="decimal" min="0" step="any" value="10"></div>
+<div class="field"><label for="jpf-target">Target margin (%)</label><input id="jpf-target" type="number" inputmode="decimal" min="0" step="any" value="20"></div>
         </div>
       </div>
       <div class="card" aria-live="polite">
@@ -75,6 +75,11 @@
           <li><span>Total cost</span><strong id="jpf-total">$16,555</strong></li>
           <li><span>Price for your target margin</span><strong id="jpf-needed">$20,694</strong></li>
         </ul>
+        <div class="side-cta result-cta">
+          <p class="small result-cta-line" id="jpf-cta">Enter your job numbers to see what the job keeps.</p>
+          <a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-job-profitability" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a>
+        </div>
+        <button type="button" class="button button-ghost button-sm print-btn no-print" onclick="window.print()">Save as PDF or print</button>
         <p class="small" style="margin-top:12px">Runs in your browser. Nothing you type is stored or sent. Example numbers are fictional.</p>
       </div>
     </form>
@@ -91,11 +96,30 @@
       <li><strong>Profit</strong> is the price minus total cost. <strong>Margin</strong> is profit divided by price.</li>
       <li><strong>Price for a target margin</strong> is total cost divided by (1 minus the target margin).</li>
     </ul>
-    <p><strong>Worked example.</strong> Price $18,500. Costs: labor $3,300 (60 hours at $55), materials $7,200, subcontractors $4,200, other $350, and overhead $1,505 (10% of direct costs). Total cost is $16,555, so profit is $1,945 and margin is 10.5%. The price for a 20% target margin is $16,555 divided by 0.80, which is $20,694.</p>
+    <p><strong>Worked example.</strong> Price $18,500. Costs: labor $3,300 (60 hours at $55), materials $7,200, subcontractors $4,200, other $350, and overhead $1,505 (10% of direct costs). Total cost is $16,555, so profit is $1,945 and margin is 10.5%. The price for a 20% target margin is $16,555 divided by 0.80, which is $20,693.75, rounded up to $20,694.</p>
     <p><strong>Underpriced</strong> means margin under 10% or a loss. <strong>Thin</strong> means at least 10% but under your target. <strong>Healthy</strong> means at or above your target.</p>
     <p class="small">Estimates only, from the numbers you enter. Not tax, legal or accounting advice.</p>
   </div>
 </section>
+<section class="block soft calc-faq-wrap">
+  <div class="container narrow prose calc-faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is job margin?</summary><p>Job margin is profit divided by the price you charge. A $18,500 job that keeps $1,945 has a 10.5% job margin.</p></details>
+    <details><summary>What is the difference between job profit and job margin?</summary><p>Job profit is dollars: the price minus total cost. Job margin is the share of the price you keep. Two jobs can make the same profit and have very different margins.</p></details>
+    <details><summary>How is overhead counted?</summary><p>Overhead here is a percentage of direct costs (labor, materials, subcontractors and other job costs). Use the percentage your business applies to job costs.</p></details>
+    <details><summary>What is the price for a target margin?</summary><p>Total cost divided by (1 minus the target margin). For a total cost of $16,555 and a 20% target, the price is $20,694.</p></details>
+    <details><summary>What do Underpriced, Thin and Healthy mean?</summary><p>Underpriced means a margin under 10% or a loss. Thin means at least 10% but under your target. Healthy means at or above your target.</p></details>
+    <details><summary>What if I do not know my labor cost per hour?</summary><p>Use your hourly rate from the contractor hourly rate calculator, which covers owner pay, tax, overhead and billable hours.</p></details>
+    <details><summary>Does the calculator work for a job I have already finished?</summary><p>Yes. Enter the final price and the actual costs to see what the job kept. For a bid versus finished-job comparison, use the estimate vs actual job cost calculator.</p></details>
+    <details><summary>Are the numbers I type stored or sent?</summary><p>No. The page runs in your browser. Nothing you type is stored or sent.</p></details>
+  </div>
+</section>
+<section class="block tight calc-related">
+  <div class="container">
+    <p class="small"><strong>Related free calculators:</strong> <a href="estimate-vs-actual-job-profit-calculator.html">Estimate vs actual job cost calculator</a> &middot; <a href="change-order-price-calculator.html">Change order pricing calculator</a> &middot; <a href="contractor-hourly-rate-calculator.html">Contractor hourly rate calculator</a> &middot; <a href="markup-vs-margin-calculator.html">Markup vs margin calculator</a> &middot; <a href="calculators/index.html">All free calculators</a></p>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is job margin?","acceptedAnswer":{"@type":"Answer","text":"Job margin is profit divided by the price you charge. A $18,500 job that keeps $1,945 has a 10.5% job margin."}},{"@type":"Question","name":"What is the difference between job profit and job margin?","acceptedAnswer":{"@type":"Answer","text":"Job profit is dollars: the price minus total cost. Job margin is the share of the price you keep. Two jobs can make the same profit and have very different margins."}},{"@type":"Question","name":"How is overhead counted?","acceptedAnswer":{"@type":"Answer","text":"Overhead here is a percentage of direct costs (labor, materials, subcontractors and other job costs). Use the percentage your business applies to job costs."}},{"@type":"Question","name":"What is the price for a target margin?","acceptedAnswer":{"@type":"Answer","text":"Total cost divided by (1 minus the target margin). For a total cost of $16,555 and a 20% target, the price is $20,694."}},{"@type":"Question","name":"What do Underpriced, Thin and Healthy mean?","acceptedAnswer":{"@type":"Answer","text":"Underpriced means a margin under 10% or a loss. Thin means at least 10% but under your target. Healthy means at or above your target."}},{"@type":"Question","name":"What if I do not know my labor cost per hour?","acceptedAnswer":{"@type":"Answer","text":"Use your hourly rate from the contractor hourly rate calculator, which covers owner pay, tax, overhead and billable hours."}},{"@type":"Question","name":"Does the calculator work for a job I have already finished?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter the final price and the actual costs to see what the job kept. For a bid versus finished-job comparison, use the estimate vs actual job cost calculator."}},{"@type":"Question","name":"Are the numbers I type stored or sent?","acceptedAnswer":{"@type":"Answer","text":"No. The page runs in your browser. Nothing you type is stored or sent."}}]}</script>
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -119,6 +143,11 @@
           <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
           <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
           <li><a href="job-profitability-calculator.html">Free job profitability calculator</a></li>
+          <li><a href="estimate-vs-actual-job-profit-calculator.html">Free estimate vs actual job cost calculator</a></li>
+          <li><a href="change-order-price-calculator.html">Free change order pricing calculator</a></li>
+          <li><a href="contractor-hourly-rate-calculator.html">Free contractor hourly rate calculator</a></li>
+          <li><a href="food-truck-break-even-calculator.html">Free food truck break-even calculator</a></li>
+          <li><a href="menu-price-calculator.html">Free menu price calculator</a></li>
 
         </ul>
       </div>

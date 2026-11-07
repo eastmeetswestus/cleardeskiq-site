@@ -87,7 +87,7 @@
     if (portionsOk && targetOk) {
       var raw_price = plate / (target / 100);
       var step = Number(raw('fc-round')) || 0;
-      targetPrice = money(step > 0 ? Math.ceil(raw_price / step - 1e-9) * step : raw_price);
+      targetPrice = money(step > 0 ? Math.ceil(raw_price / step - 1e-9) * step : Math.ceil(raw_price * 100 - 1e-9) / 100);
     } else if (!targetOk) {
       msgs.push('Target food cost must be above 0% and below 100%.');
     }
@@ -123,7 +123,8 @@
         ? top.slice(0, 3).map(function (t) { return '<li><span>' + t.name.replace(/[<>&]/g, '') + '</span><strong>' + money(t.per) + '</strong></li>'; }).join('')
         : '<li><span>Add ingredients below</span></li>';
     }
-    msgBox('fc-msgs', msgs);
+    setT('fc-cta', sellOk && portionsOk ? 'Plate cost ' + money(plate) + ' and food cost ' + pct(plate / sell * 100) + ' at this price. ClearDesk IQ Restaurant Edition keeps plate cost and food cost % for each dish, with vendor price changes.' : 'Enter a selling price to see plate cost and food cost %.');
+  msgBox('fc-msgs', msgs);  msgBox('fc-msgs', msgs);
   }
 
   // ------------------------------------------------------------ prime cost
@@ -152,7 +153,8 @@
       setT('pc-status', 'Enter sales above $0');
       var st2 = $('pc-status'); if (st2) st2.className = 'flag thin';
     }
-    msgBox('pc-msgs', msgs);
+    setT('pc-cta', sOk ? 'Prime cost is ' + pct(prime / s * 100) + ' of sales. The Restaurant Edition shows food, drink and labor against sales for each period.' : 'Enter sales above $0 to see prime cost as a percent of sales.');
+  msgBox('pc-msgs', msgs);  msgBox('pc-msgs', msgs);
   }
 
   // ------------------------------------------------------------ markup vs margin
@@ -170,18 +172,19 @@
     var priceM = 'n/a';
     if (costOk && tm !== null && !bad(tm)) {
       if (tm < 0 || tm >= 100) msgs.push('A target margin must be at least 0% and below 100%. A 100% margin needs an impossible price.');
-      else priceM = money(cost / (1 - tm / 100));
+      else priceM = money(Math.ceil(cost / (1 - tm / 100) * 100 - 1e-9) / 100);
     }
     setT('mm-price-margin', priceM);
 
     var priceK = 'n/a', marginK = 'n/a';
     if (costOk && tk !== null && !bad(tk)) {
       if (tk < 0) msgs.push('A target markup cannot be negative.');
-      else { priceK = money(cost * (1 + tk / 100)); marginK = pct(tk / (100 + tk) * 100); }
+      else { priceK = money(Math.ceil(cost * (1 + tk / 100) * 100 - 1e-9) / 100); marginK = pct(tk / (100 + tk) * 100); }
     }
     setT('mm-price-markup', priceK);
     setT('mm-margin-at-markup', marginK);
-    msgBox('mm-msgs', msgs);
+    setT('mm-cta', costOk && cost > 0 && sellOk ? 'At this price the margin is ' + pct((sell - cost) / sell * 100) + ' and the markup is ' + pct((sell - cost) / cost * 100) + '. ClearDesk IQ builds each estimate from your costs, with your target margin and overhead.' : 'Enter a cost and a price to see the margin and the markup.');
+  msgBox('mm-msgs', msgs);  msgBox('mm-msgs', msgs);
   }
 
   // Forms: recalc on every change.

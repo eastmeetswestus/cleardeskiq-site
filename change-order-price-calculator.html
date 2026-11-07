@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change Order Pricing Calculator | ClearDesk IQ</title>
+<meta name="description" content="Change order pricing calculator: price added work with overhead and profit, not direct cost only. Worked example. Free, runs in your browser.">
+<meta name="theme-color" content="#10273f">
+<link rel="canonical" href="https://cleardeskiq.com/change-order-price-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClearDesk IQ">
+<meta property="og:title" content="Change Order Pricing Calculator | ClearDesk IQ">
+<meta property="og:description" content="Change order pricing calculator: price added work with overhead and profit, not direct cost only. Worked example. Free, runs in your browser.">
+<meta property="og:url" content="https://cleardeskiq.com/change-order-price-calculator.html">
+<meta property="og:image" content="https://cleardeskiq.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ClearDesk IQ: run your whole business from one place. One payment, no monthly fees.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Change Order Pricing Calculator","description":"Change order pricing calculator: price added work with overhead and profit, not direct cost only. Worked example. Free, runs in your browser.","url":"https://cleardeskiq.com/change-order-price-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any modern web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ClearDesk IQ","url":"https://cleardeskiq.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cleardeskiq.com/"},{"@type":"ListItem","position":2,"name":"Free calculators","item":"https://cleardeskiq.com/calculators/"},{"@type":"ListItem","position":3,"name":"Change order pricing calculator","item":"https://cleardeskiq.com/change-order-price-calculator.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="ClearDesk IQ home"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk <span class="iq">IQ</span></a>
+    <nav class="nav" aria-label="Main"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="calculators/index.html" aria-current="page">Free calculators</a><a href="pricing.html">Pricing</a><a href="help/index.html">Help</a></nav>
+    <a class="button button-store button-sm header-cta" href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-change-order" rel="noopener">Get it on the Microsoft Store</a>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="calculators/index.html" aria-current="page">Free calculators</a><a href="pricing.html">Pricing</a><a href="help/index.html">Help</a><a href="download.html">Download</a><a href="contact.html">Contact &amp; support</a><a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-change-order" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get it on the Microsoft Store</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="calculators/index.html">Free calculators</a> / Change order pricing calculator</p>
+    <h1>Change Order Pricing Calculator</h1>
+    <p class="lead">A change order is added or changed work the customer approves after the contract is signed. Price it on direct cost plus overhead, then take profit as a margin on the price. Enter the direct cost of the change, your overhead percentage and the margin you want. Free, runs in your browser, no sign-up.</p>
+    <div class="card answer" style="margin-top:18px">
+      <p style="margin:0 0 10px"><strong>Formula.</strong> Price = (direct cost + overhead) divided by (1 minus the profit margin). Overhead = direct cost times overhead %. Profit = price minus the cost with overhead.</p>
+      <p style="margin:0"><strong>Example.</strong> A $3,200 change with 30% overhead and a 20% margin: overhead $960, cost $4,160, price $5,200, profit $1,040. Charging direct cost only would leave $2,000 of overhead and profit unpaid.</p>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <form id="co-form" class="calc" onsubmit="return false">
+      <div class="card">
+        <h2 class="h-sm">The change</h2>
+        <div class="fields">
+<div class="field"><label for="co-direct">Direct cost of the change ($): materials and labor you pay for it</label><input id="co-direct" type="number" inputmode="decimal" min="0" step="any" value="3200"></div>
+<div class="field"><label for="co-oh">Overhead on the change (% of direct cost)</label><input id="co-oh" type="number" inputmode="decimal" min="0" step="any" value="30"></div>
+<div class="field"><label for="co-margin">Profit margin you want on the change (% of price)</label><input id="co-margin" type="number" inputmode="decimal" min="0" step="any" value="20"></div>
+        </div>
+      </div>
+      <div class="card" aria-live="polite">
+        <h2 class="h-sm">Price for the change</h2>
+        <p class="small" style="margin:0">Change order price</p>
+        <p class="result-big" id="co-big">n/a</p>
+        <p style="margin:6px 0 12px"><span class="flag thin" id="co-flag">Enter numbers</span></p>
+        <ul class="result-list">
+          <li><span>Overhead</span><strong id="co-oh-amt">n/a</strong></li>
+          <li><span>Cost with overhead</span><strong id="co-cost">n/a</strong></li>
+          <li><span>Profit</span><strong id="co-profit">n/a</strong></li>
+          <li><span>Margin on the price</span><strong id="co-margin-out">n/a</strong></li>
+          <li><span>Left unpaid if you charge direct cost only</span><strong id="co-lost">n/a</strong></li>
+        </ul>
+        <div class="side-cta result-cta">
+          <p class="small result-cta-line" id="co-cta">Enter the direct cost of the change to see its price.</p>
+          <a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-change-order" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a>
+        </div>
+        <div id="co-msgs" class="msgs" role="status"></div>
+        <button type="button" class="button button-ghost button-sm print-btn no-print" onclick="window.print()">Save as PDF or print</button>
+        <p class="print-only">Printed from https://cleardeskiq.com/change-order-price-calculator.html. Estimates only, from the numbers entered. Not tax, legal or accounting advice.</p>
+      </div>
+    </form>
+    <p class="small" style="margin-top:14px">Estimates only, from the numbers you enter. Not tax, legal or accounting advice. Example numbers are fictional.</p>
+  </div>
+</section>
+<section class="block soft">
+  <div class="container grid-2" style="gap:40px;align-items:start">
+    <div class="prose">
+      <h2>How the numbers work</h2>
+      <ul>
+        <li>Overhead is the direct cost times your overhead percentage.</li>
+        <li>Price = (direct cost + overhead) divided by (1 minus the profit margin). The margin is measured on the price, the same way the job margin is.</li>
+        <li>Charging direct cost only means the price equals the direct cost, so overhead and profit are not paid.</li>
+        <li>Negative inputs count as 0. A margin of 100% or more has no price, so the calculator asks for a lower margin.</li>
+      </ul>
+      <h2>What this does not count</h2>
+      <ul>
+        <li>Sales tax on the change. Charge tax as your contract and local rules require.</li>
+        <li>Schedule impact or other scope changes. Price those separately.</li>
+        <li>Whether the customer approves the change. Your contract sets how changes are approved.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Track each change order to approval</h3>
+      <p>Records each change order as Draft, Submitted, Approved or Rejected. Only approved changes adjust the contract value and budget.</p>
+      <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-change-order" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a></div>
+    </div>
+  </div>
+</section>
+<section class="block soft calc-faq-wrap">
+  <div class="container narrow prose calc-faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is the difference between an estimate and a change order?</summary><p>An estimate prices the original job before you sign. A change order prices added or changed work after the contract is signed. The same formula can price both.</p></details>
+    <details><summary>Why charge overhead and profit on a change?</summary><p>Overhead is the cost of running the business: insurance, truck, phone and office. Added work adds overhead too. Charging direct cost only leaves that overhead and any profit unpaid.</p></details>
+    <details><summary>Is the margin on the price or markup on cost?</summary><p>This calculator uses margin on the price, the same convention as the job profitability calculator. A 20% margin is a 25% markup on cost. The markup vs margin calculator converts either way.</p></details>
+    <details><summary>What if the change is mostly labor?</summary><p>Enter your labor cost for the time as direct cost. The contractor hourly rate calculator shows how to set the labor cost per hour.</p></details>
+    <details><summary>What do I enter for overhead?</summary><p>Use the overhead percentage you apply to direct cost. The contractor hourly rate calculator shows how yearly overhead changes the rate you need.</p></details>
+    <details><summary>Can I use it for a credit, when work is taken out?</summary><p>This page prices added work only. It does not price savings from removed scope. Agree the credit amount with the customer and record it on the change order.</p></details>
+    <details><summary>Does ClearDesk IQ track change orders?</summary><p>Yes. The Windows app records each change order as Draft, Submitted, Approved or Rejected. Only approved changes adjust the contract value and budget.</p></details>
+    <details><summary>Are the numbers I type stored or sent?</summary><p>No. The page runs in your browser. Nothing you type is stored or sent.</p></details>
+  </div>
+</section>
+<section class="block tight calc-related">
+  <div class="container">
+    <p class="small"><strong>Related free calculators:</strong> <a href="estimate-vs-actual-job-profit-calculator.html">Estimate vs actual job cost calculator</a> &middot; <a href="job-profitability-calculator.html">Job profitability and job margin calculator</a> &middot; <a href="markup-vs-margin-calculator.html">Markup vs margin calculator</a> &middot; <a href="calculators/index.html">All free calculators</a></p>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an estimate and a change order?","acceptedAnswer":{"@type":"Answer","text":"An estimate prices the original job before you sign. A change order prices added or changed work after the contract is signed. The same formula can price both."}},{"@type":"Question","name":"Why charge overhead and profit on a change?","acceptedAnswer":{"@type":"Answer","text":"Overhead is the cost of running the business: insurance, truck, phone and office. Added work adds overhead too. Charging direct cost only leaves that overhead and any profit unpaid."}},{"@type":"Question","name":"Is the margin on the price or markup on cost?","acceptedAnswer":{"@type":"Answer","text":"This calculator uses margin on the price, the same convention as the job profitability calculator. A 20% margin is a 25% markup on cost. The markup vs margin calculator converts either way."}},{"@type":"Question","name":"What if the change is mostly labor?","acceptedAnswer":{"@type":"Answer","text":"Enter your labor cost for the time as direct cost. The contractor hourly rate calculator shows how to set the labor cost per hour."}},{"@type":"Question","name":"What do I enter for overhead?","acceptedAnswer":{"@type":"Answer","text":"Use the overhead percentage you apply to direct cost. The contractor hourly rate calculator shows how yearly overhead changes the rate you need."}},{"@type":"Question","name":"Can I use it for a credit, when work is taken out?","acceptedAnswer":{"@type":"Answer","text":"This page prices added work only. It does not price savings from removed scope. Agree the credit amount with the customer and record it on the change order."}},{"@type":"Question","name":"Does ClearDesk IQ track change orders?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Windows app records each change order as Draft, Submitted, Approved or Rejected. Only approved changes adjust the contract value and budget."}},{"@type":"Question","name":"Are the numbers I type stored or sent?","acceptedAnswer":{"@type":"Answer","text":"No. The page runs in your browser. Nothing you type is stored or sent."}}]}</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk IQ</p>
+        <p>Run your small business from one place. A business money-and-time tool: a complete business management system. One payment. No monthly fees.</p>
+        <p class="small" style="color:#9fb4c7">For contractors: Windows 10 and 11 &middot; $79.99 one time on the Microsoft Store<br>Restaurant Edition: on the Microsoft Store</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="contractors/index.html">For contractors</a></li>
+          <li><a href="restaurants/index.html">For restaurants</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="calculators/index.html">All free calculators</a></li>
+          <li><a href="markup-vs-margin-calculator.html">Free markup vs margin calculator</a></li>
+          <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
+          <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
+          <li><a href="job-profitability-calculator.html">Free job profitability calculator</a></li>
+          <li><a href="estimate-vs-actual-job-profit-calculator.html">Free estimate vs actual job cost calculator</a></li>
+          <li><a href="change-order-price-calculator.html">Free change order pricing calculator</a></li>
+          <li><a href="contractor-hourly-rate-calculator.html">Free contractor hourly rate calculator</a></li>
+          <li><a href="food-truck-break-even-calculator.html">Free food truck break-even calculator</a></li>
+          <li><a href="menu-price-calculator.html">Free menu price calculator</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="help/index.html">Help center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact &amp; support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-change-order" rel="noopener">Get it on the Microsoft Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-fine">ClearDesk IQ helps you run the business side of your work. It is not tax, legal or accounting advice. Screens show fictional example data. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies. &copy; 2026 ClearDesk IQ.</p>
+  </div>
+</footer>
+<script src="assets/js/calc-wave1.js" defer></script>
+</body>
+</html>

@@ -393,3 +393,23 @@ select{min-height:48px;padding:10px 12px;border:1px solid #c9d4de;border-radius:
 .pain-chips li { border: 1px solid #bcd0e0; border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: 14px; background: #fff; color: #10273f; }
 .result-big.is-warn { color: #9a6700; }
 .m-sticky-mail .button { display: flex; justify-content: center; align-items: center; text-align: center; }
+
+/* ---- Free calculators, wave 1 (2026-11-07): result CTA, FAQ, print ---- */
+.result-cta { margin-top: 16px; }
+.result-cta-line { margin: 0 0 12px; }
+.calc-faq details { border-top: 1px solid #d9e2ea; padding: 12px 0; }
+.calc-faq details:last-child { border-bottom: 1px solid #d9e2ea; }
+.calc-faq summary { cursor: pointer; font-weight: 700; }
+.calc-faq details p { margin: 8px 0 0; }
+.print-only { display: none; }
+@media print {
+  .site-header, .site-footer, .skip, .saleBanner, .sale-banner, .no-print, .print-btn,
+  .result-cta .button, .calc-related, .menu, .button, .store-row, .crumbs, .calc-faq-wrap { display: none !important; }
+  .print-only { display: block !important; font-size: 10pt; margin-top: 12px; }
+  body { background: #fff !important; color: #000 !important; }
+  .card, .calc, .block, .section { box-shadow: none !important; border-color: #999 !important; }
+  .page-head .lead, .page-head h1 { color: #000 !important; }
+  main { padding: 0 !important; }
+  .calc input, .calc select { border: 1px solid #666 !important; }
+  a { color: #000 !important; text-decoration: none !important; }
+}

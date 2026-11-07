@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Markup vs Margin Calculator: Convert Both Ways | ClearDesk IQ</title>
+<title>Markup vs Margin Calculator | ClearDesk IQ</title>
 <meta name="description" content="Convert markup to margin and back. Example: a 25% markup is a 20% margin. Free, runs in your browser.">
 <meta name="theme-color" content="#10273f">
 <link rel="canonical" href="https://cleardeskiq.com/markup-vs-margin-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ClearDesk IQ">
-<meta property="og:title" content="Markup vs Margin Calculator: Convert Both Ways | ClearDesk IQ">
+<meta property="og:title" content="Markup vs Margin Calculator | ClearDesk IQ">
 <meta property="og:description" content="Convert markup to margin and back. Example: a 25% markup is a 20% margin. Free, runs in your browser.">
 <meta property="og:url" content="https://cleardeskiq.com/markup-vs-margin-calculator.html">
 <meta property="og:image" content="https://cleardeskiq.com/og-image.png">
@@ -69,6 +69,11 @@
           <li><span>Price for your target markup</span><strong id="mm-price-markup">n/a</strong></li>
           <li><span>Margin at your target markup</span><strong id="mm-margin-at-markup">n/a</strong></li>
         </ul>
+        <div class="side-cta result-cta">
+          <p class="small result-cta-line" id="mm-cta">Enter a cost and a price to see the margin and the markup.</p>
+          <a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PL41B197M7R?cid=web-calc-markup" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a>
+        </div>
+        <button type="button" class="button button-ghost button-sm print-btn no-print" onclick="window.print()">Save as PDF or print</button>
         <div id="mm-msgs" class="msgs" role="status"></div>
       </div>
     </form>
@@ -85,6 +90,7 @@
         <li><strong>Margin</strong> = (price minus cost) divided by price.</li>
         <li><strong>Price for a target margin</strong> = cost divided by (1 minus the margin). A margin must be below 100%.</li>
         <li><strong>Price for a target markup</strong> = cost times (1 plus the markup).</li>
+        <li>Rounded up to the next cent, the way ClearDesk IQ prices an estimate.</li>
       </ul>
       <h2>A worked example</h2>
       <p>A cost of $100 sold at $150 is a 50% markup and a 33.33% margin. To earn a 30% margin on the same cost, the price is $142.86. A 25% markup gives $125.00, which is a 20% margin.</p>
@@ -100,6 +106,25 @@
     </div>
   </div>
 </section>
+<section class="block soft calc-faq-wrap">
+  <div class="container narrow prose calc-faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is the difference between markup and margin?</summary><p>Markup is profit as a percent of cost. Margin is profit as a percent of price. A $100 cost sold at $150 is a 50% markup and a 33.33% margin.</p></details>
+    <details><summary>Which one should I quote?</summary><p>Quote the number your business plans around. Many contractors set prices on a target margin, because margin shows the share of each dollar you keep.</p></details>
+    <details><summary>What is a 25% markup as a margin?</summary><p>A 25% markup is a 20% margin on the same cost: profit of $25 on $125 of price.</p></details>
+    <details><summary>Why is the price for a target margin cost divided by (1 minus margin)?</summary><p>Because profit is taken from the price. To keep 30% of the price, the cost must be 70% of the price, so the price is cost divided by 0.70.</p></details>
+    <details><summary>What does a margin of 100% mean?</summary><p>It would need a price with no cost, so no price is defined. The calculator asks for a margin below 100%.</p></details>
+    <details><summary>Can I use this for a whole job?</summary><p>Use the job profitability calculator for a whole job with labor, overhead and other costs. Use this page to convert one cost and one price.</p></details>
+    <details><summary>Is the markup on cost before or after overhead?</summary><p>The calculator uses the cost you enter. Put overhead in that cost if you want the markup to include it.</p></details>
+    <details><summary>Are the numbers I type stored or sent?</summary><p>No. The page runs in your browser. Nothing you type is stored or sent.</p></details>
+  </div>
+</section>
+<section class="block tight calc-related">
+  <div class="container">
+    <p class="small"><strong>Related free calculators:</strong> <a href="job-profitability-calculator.html">Job profitability and job margin calculator</a> &middot; <a href="change-order-price-calculator.html">Change order pricing calculator</a> &middot; <a href="menu-price-calculator.html">Menu price calculator</a> &middot; <a href="calculators/index.html">All free calculators</a></p>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between markup and margin?","acceptedAnswer":{"@type":"Answer","text":"Markup is profit as a percent of cost. Margin is profit as a percent of price. A $100 cost sold at $150 is a 50% markup and a 33.33% margin."}},{"@type":"Question","name":"Which one should I quote?","acceptedAnswer":{"@type":"Answer","text":"Quote the number your business plans around. Many contractors set prices on a target margin, because margin shows the share of each dollar you keep."}},{"@type":"Question","name":"What is a 25% markup as a margin?","acceptedAnswer":{"@type":"Answer","text":"A 25% markup is a 20% margin on the same cost: profit of $25 on $125 of price."}},{"@type":"Question","name":"Why is the price for a target margin cost divided by (1 minus margin)?","acceptedAnswer":{"@type":"Answer","text":"Because profit is taken from the price. To keep 30% of the price, the cost must be 70% of the price, so the price is cost divided by 0.70."}},{"@type":"Question","name":"What does a margin of 100% mean?","acceptedAnswer":{"@type":"Answer","text":"It would need a price with no cost, so no price is defined. The calculator asks for a margin below 100%."}},{"@type":"Question","name":"Can I use this for a whole job?","acceptedAnswer":{"@type":"Answer","text":"Use the job profitability calculator for a whole job with labor, overhead and other costs. Use this page to convert one cost and one price."}},{"@type":"Question","name":"Is the markup on cost before or after overhead?","acceptedAnswer":{"@type":"Answer","text":"The calculator uses the cost you enter. Put overhead in that cost if you want the markup to include it."}},{"@type":"Question","name":"Are the numbers I type stored or sent?","acceptedAnswer":{"@type":"Answer","text":"No. The page runs in your browser. Nothing you type is stored or sent."}}]}</script>
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -123,6 +148,11 @@
           <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
           <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
           <li><a href="job-profitability-calculator.html">Free job profitability calculator</a></li>
+          <li><a href="estimate-vs-actual-job-profit-calculator.html">Free estimate vs actual job cost calculator</a></li>
+          <li><a href="change-order-price-calculator.html">Free change order pricing calculator</a></li>
+          <li><a href="contractor-hourly-rate-calculator.html">Free contractor hourly rate calculator</a></li>
+          <li><a href="food-truck-break-even-calculator.html">Free food truck break-even calculator</a></li>
+          <li><a href="menu-price-calculator.html">Free menu price calculator</a></li>
 
         </ul>
       </div>

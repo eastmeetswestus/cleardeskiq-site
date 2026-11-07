@@ -46,7 +46,7 @@
     <h1>Food cost per plate calculator</h1>
     <p class="lead">Plate cost is what one dish costs in ingredients: the amount used times the price you paid per unit, added up for each ingredient. Food cost % is plate cost divided by the selling price. Enter one dish to see both, and the price that hits your target. Free, runs in your browser, no sign-up.</p>
     <p class="small">A free calculator. It is not the Restaurant Edition, which is <a href="restaurants/index.html">on the Microsoft Store</a>.</p>
-    <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-food-cost" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get ClearDesk IQ Restaurant on the Microsoft Store - free trial</a></div>
+    <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-food-cost" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get ClearDesk IQ Restaurant on the Microsoft Store</a></div>
   </div>
 </section>
 <section class="block">
@@ -61,7 +61,7 @@
             <div class="field"><label for="fc-portions">Portions the recipe makes</label><input id="fc-portions" type="text" inputmode="numeric" min="1" step="1" value="1"></div>
             <div class="field"><label for="fc-target">Target food cost (%)</label><input id="fc-target" type="text" inputmode="decimal" min="1" max="99" step="0.5" value="30"></div>
             <div class="field"><label for="fc-extras">Flat costs per plate ($): sauce, garnish, container, oil</label><input id="fc-extras" type="text" inputmode="decimal" min="0" step="0.01" value="0.60"></div>
-            <div class="field"><label for="fc-round">Round the target price</label><select id="fc-round"><option value="0">To the exact cent</option><option value="0.25">Up to the next $0.25</option><option value="0.5">Up to the next $0.50</option></select></div>
+            <div class="field"><label for="fc-round">Round the target price</label><select id="fc-round"><option value="0">Up to the next cent</option><option value="0.25">Up to the next $0.25</option><option value="0.5">Up to the next $0.50</option></select></div>
             <div class="field"><label for="fc-units">Units sold per week (optional)</label><input id="fc-units" type="text" inputmode="numeric" min="0" step="1" value=""></div>
           </div>
         </div>
@@ -79,6 +79,11 @@
           </ul>
           <h3 class="h-sm" style="margin-top:18px">Largest costs on one plate</h3>
           <ol class="top-costs" id="fc-top"><li><span>Add ingredients below</span></li></ol>
+                  <div class="side-cta result-cta">
+          <p class="small result-cta-line" id="fc-cta">Enter a selling price to see plate cost and food cost %.</p>
+          <a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-food-cost" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a>
+        </div>
+
           <div id="fc-msgs" class="msgs" role="status"></div>
           <button type="button" class="button button-ghost button-sm print-btn" onclick="window.print()">Print or save as PDF</button>
         </div>
@@ -182,9 +187,10 @@
         <li><strong>Food cost %</strong> = plate cost divided by the selling price, times 100.</li>
         <li><strong>Margin per plate</strong> = selling price minus plate cost.</li>
         <li><strong>Price to hit your target</strong> = plate cost divided by your target food cost %, optionally rounded up.</li>
+        <li>Rounded up to the next cent, the way ClearDesk IQ prices an estimate.</li>
       </ul>
       <h2>A worked example</h2>
-      <p>The example above: chicken 8 oz at $3.50 per lb ($1.75), rice 4 oz at $1.20 per lb ($0.30), vegetables 5 oz at $2.40 per lb ($0.75), and $0.60 of sauce, garnish and container. Plate cost is $3.40. At a $14.00 price, food cost is 24.29% and the margin is $10.60. To hit 30%, the price is $11.33.</p>
+      <p>The example above: chicken 8 oz at $3.50 per lb ($1.75), rice 4 oz at $1.20 per lb ($0.30), vegetables 5 oz at $2.40 per lb ($0.75), and $0.60 of sauce, garnish and container. Plate cost is $3.40. At a $14.00 price, food cost is 24.29% and the margin is $10.60. To hit 30%, the price is $11.34.</p>
       <h2>What this does not count</h2>
       <ul>
         <li>Labor, rent, utilities and insurance.</li>
@@ -195,10 +201,29 @@
     <div class="card">
       <h3>Want this every week, without a spreadsheet?</h3>
       <p>The Restaurant Edition keeps plate cost, food cost % and prime cost in one Windows app, with vendor price changes. It is sold on the Microsoft Store.</p>
-      <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-food-cost" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get ClearDesk IQ Restaurant on the Microsoft Store - free trial</a><a class="button button-ghost" href="restaurants/index.html">About the Restaurant Edition</a></div>
+      <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-food-cost" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get ClearDesk IQ Restaurant on the Microsoft Store</a><a class="button button-ghost" href="restaurants/index.html">About the Restaurant Edition</a></div>
     </div>
   </div>
 </section>
+<section class="block soft calc-faq-wrap">
+  <div class="container narrow prose calc-faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is plate cost?</summary><p>Plate cost is what one dish costs in ingredients: the amount used at the price you paid, divided by the yield, summed for each ingredient and divided by the portions the recipe makes. Flat costs such as sauce and container are added.</p></details>
+    <details><summary>What is a good food cost %?</summary><p>Vendor guides commonly cite 28% to 35% of the menu price. Pick the target your concept needs and check it against your own prices.</p></details>
+    <details><summary>What is yield?</summary><p>The share of an ingredient you keep after trimming and waste. An 85% yield means you keep 85% of what you buy, so the cost of usable food is higher.</p></details>
+    <details><summary>Why do the units have to match?</summary><p>The calculator converts weight with weight, volume with volume and each with each. A pack in pounds cannot price an amount in cups, so that row is left out with a message.</p></details>
+    <details><summary>What does food cost % leave out?</summary><p>Labor, rent, utilities, insurance, waste you do not record, comps and spills, sales tax and card fees. Use the prime cost calculator for labor.</p></details>
+    <details><summary>How do I use the price to hit target?</summary><p>It is the plate cost divided by your target food cost %. Round up with the option you choose, so the food cost stays at or under the target.</p></details>
+    <details><summary>Does ClearDesk IQ Restaurant track plate cost?</summary><p>Yes. The Restaurant Edition builds a dish from ingredient prices and shows plate cost, food cost % and profit per plate, and it records vendor price changes in price history.</p></details>
+    <details><summary>Are the numbers I type stored or sent?</summary><p>No. The page runs in your browser. Nothing you type is stored or sent.</p></details>
+  </div>
+</section>
+<section class="block tight calc-related">
+  <div class="container">
+    <p class="small"><strong>Related free calculators:</strong> <a href="menu-price-calculator.html">Menu price calculator</a> &middot; <a href="prime-cost-calculator.html">Prime cost calculator</a> &middot; <a href="food-truck-break-even-calculator.html">Food truck break-even calculator</a> &middot; <a href="calculators/index.html">All free calculators</a></p>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is plate cost?","acceptedAnswer":{"@type":"Answer","text":"Plate cost is what one dish costs in ingredients: the amount used at the price you paid, divided by the yield, summed for each ingredient and divided by the portions the recipe makes. Flat costs such as sauce and container are added."}},{"@type":"Question","name":"What is a good food cost %?","acceptedAnswer":{"@type":"Answer","text":"Vendor guides commonly cite 28% to 35% of the menu price. Pick the target your concept needs and check it against your own prices."}},{"@type":"Question","name":"What is yield?","acceptedAnswer":{"@type":"Answer","text":"The share of an ingredient you keep after trimming and waste. An 85% yield means you keep 85% of what you buy, so the cost of usable food is higher."}},{"@type":"Question","name":"Why do the units have to match?","acceptedAnswer":{"@type":"Answer","text":"The calculator converts weight with weight, volume with volume and each with each. A pack in pounds cannot price an amount in cups, so that row is left out with a message."}},{"@type":"Question","name":"What does food cost % leave out?","acceptedAnswer":{"@type":"Answer","text":"Labor, rent, utilities, insurance, waste you do not record, comps and spills, sales tax and card fees. Use the prime cost calculator for labor."}},{"@type":"Question","name":"How do I use the price to hit target?","acceptedAnswer":{"@type":"Answer","text":"It is the plate cost divided by your target food cost %. Round up with the option you choose, so the food cost stays at or under the target."}},{"@type":"Question","name":"Does ClearDesk IQ Restaurant track plate cost?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Restaurant Edition builds a dish from ingredient prices and shows plate cost, food cost % and profit per plate, and it records vendor price changes in price history."}},{"@type":"Question","name":"Are the numbers I type stored or sent?","acceptedAnswer":{"@type":"Answer","text":"No. The page runs in your browser. Nothing you type is stored or sent."}}]}</script>
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -222,6 +247,11 @@
           <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
           <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
           <li><a href="job-profitability-calculator.html">Free job profitability calculator</a></li>
+          <li><a href="estimate-vs-actual-job-profit-calculator.html">Free estimate vs actual job cost calculator</a></li>
+          <li><a href="change-order-price-calculator.html">Free change order pricing calculator</a></li>
+          <li><a href="contractor-hourly-rate-calculator.html">Free contractor hourly rate calculator</a></li>
+          <li><a href="food-truck-break-even-calculator.html">Free food truck break-even calculator</a></li>
+          <li><a href="menu-price-calculator.html">Free menu price calculator</a></li>
 
         </ul>
       </div>

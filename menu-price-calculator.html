@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu Price Calculator from Food Cost Percent | ClearDesk IQ</title>
+<meta name="description" content="Menu price calculator: set a menu price from plate cost and your target food cost %, rounded up. Free, runs in your browser, nothing is stored.">
+<meta name="theme-color" content="#10273f">
+<link rel="canonical" href="https://cleardeskiq.com/menu-price-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClearDesk IQ">
+<meta property="og:title" content="Menu Price Calculator from Food Cost Percent | ClearDesk IQ">
+<meta property="og:description" content="Menu price calculator: set a menu price from plate cost and your target food cost %, rounded up. Free, runs in your browser, nothing is stored.">
+<meta property="og:url" content="https://cleardeskiq.com/menu-price-calculator.html">
+<meta property="og:image" content="https://cleardeskiq.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ClearDesk IQ: run your whole business from one place. One payment, no monthly fees.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Menu Price Calculator","description":"Menu price calculator: set a menu price from plate cost and your target food cost %, rounded up. Free, runs in your browser, nothing is stored.","url":"https://cleardeskiq.com/menu-price-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any modern web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ClearDesk IQ","url":"https://cleardeskiq.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cleardeskiq.com/"},{"@type":"ListItem","position":2,"name":"Free calculators","item":"https://cleardeskiq.com/calculators/"},{"@type":"ListItem","position":3,"name":"Menu price calculator","item":"https://cleardeskiq.com/menu-price-calculator.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="ClearDesk IQ home"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk <span class="iq">IQ</span></a>
+    <nav class="nav" aria-label="Main"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="calculators/index.html" aria-current="page">Free calculators</a><a href="pricing.html">Pricing</a><a href="help/index.html">Help</a></nav>
+    <a class="button button-store button-sm header-cta" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-menu-price" rel="noopener">Get it on the Microsoft Store</a>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="contractors/index.html">Contractors</a><a href="restaurants/index.html">Restaurants</a><a href="calculators/index.html" aria-current="page">Free calculators</a><a href="pricing.html">Pricing</a><a href="help/index.html">Help</a><a href="download.html">Download</a><a href="contact.html">Contact &amp; support</a><a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-menu-price" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Get it on the Microsoft Store</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="calculators/index.html">Free calculators</a> / Menu price calculator</p>
+    <h1>Menu Price Calculator</h1>
+    <p class="lead">Set a menu price from the plate cost of a dish and the food cost percentage you want. The calculator rounds up, so the dish stays at or under your target. Enter the current price to see whether the dish is on target. Free, runs in your browser, no sign-up.</p>
+    <div class="card answer" style="margin-top:18px">
+      <p style="margin:0 0 10px"><strong>Formula.</strong> Menu price = plate cost divided by target food cost %, rounded up to the cent or to the next $0.25 or $0.50. Food cost % = plate cost divided by menu price.</p>
+      <p style="margin:0"><strong>Example.</strong> Plate cost $3.40 at a 30% target: $3.40 divided by 0.30 is $11.33, rounded up to $11.34, or $11.50 if you round up to the next $0.25. At $11.50 the food cost is 29.57% and the profit per plate is $8.10.</p>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <form id="mp-form" class="calc" onsubmit="return false">
+      <div class="card">
+        <h2 class="h-sm">The dish</h2>
+        <div class="fields">
+<div class="field"><label for="mp-plate">Plate cost ($): ingredients per plate, before tax</label><input id="mp-plate" type="number" inputmode="decimal" min="0" step="any" value="3.40"></div>
+<div class="field"><label for="mp-current">Current menu price ($), optional</label><input id="mp-current" type="number" inputmode="decimal" min="0" step="any" value="10"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="h-sm">Your target</h2>
+        <div class="fields">
+<div class="field"><label for="mp-target">Target food cost (%)</label><input id="mp-target" type="number" inputmode="decimal" min="0" max="99.99" step="any" value="30"></div>
+<div class="field"><label for="mp-round">Round the price up to</label><select id="mp-round"><option value="0">the next cent</option><option value="0.25" selected>the next $0.25</option><option value="0.5">the next $0.50</option></select></div>
+        </div>
+      </div>
+      <div class="card" aria-live="polite">
+        <h2 class="h-sm">Price to hit your target</h2>
+        <p class="small" style="margin:0">Menu price for your target</p>
+        <p class="result-big" id="mp-big">n/a</p>
+        <p style="margin:6px 0 12px"><span class="flag thin" id="mp-flag">Enter numbers</span></p>
+        <ul class="result-list">
+          <li><span>Food cost % at this price</span><strong id="mp-pct">n/a</strong></li>
+          <li><span>Profit per plate at this price</span><strong id="mp-profit">n/a</strong></li>
+          <li><span>Current food cost % (current price)</span><strong id="mp-cur-pct">n/a</strong></li>
+          <li><span>Change to reach this price</span><strong id="mp-raise">n/a</strong></li>
+        </ul>
+        <div class="side-cta result-cta">
+          <p class="small result-cta-line" id="mp-cta">Enter a plate cost above $0 to see the menu price.</p>
+          <a class="button button-store button-sm" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-menu-price" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a>
+        </div>
+        <div id="mp-msgs" class="msgs" role="status"></div>
+        <button type="button" class="button button-ghost button-sm print-btn no-print" onclick="window.print()">Save as PDF or print</button>
+        <p class="print-only">Printed from https://cleardeskiq.com/menu-price-calculator.html. Estimates only, from the numbers entered. Not tax, legal or accounting advice.</p>
+      </div>
+    </form>
+    <p class="small" style="margin-top:14px">Estimates only, from the numbers you enter. Not tax, legal or accounting advice. Example numbers are fictional.</p>
+  </div>
+</section>
+<section class="block soft">
+  <div class="container grid-2" style="gap:40px;align-items:start">
+    <div class="prose">
+      <h2>How the numbers work</h2>
+      <ul>
+        <li>Plate cost comes from the food cost calculator: ingredient cost per portion plus flat costs such as sauce, garnish and container.</li>
+        <li>Rounding up keeps the food cost at or under the target. Rounding down pushes it over.</li>
+        <li>Enter menu prices before tax, the same way the Restaurant Edition does.</li>
+        <li>Profit per plate = menu price minus plate cost.</li>
+      </ul>
+      <h2>What this does not count</h2>
+      <ul>
+        <li>Labor, rent and other costs. See the prime cost calculator for labor.</li>
+        <li>Menu balance. A high-margin dish can still sell poorly, so check what sells.</li>
+        <li>Discounts, comps and combos, unless you price each one as its own dish.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Rank every dish by profit per plate</h3>
+      <p>ClearDesk IQ Restaurant Edition shows each dish with its plate cost, food cost % and profit per plate, ranks dishes by profit per plate and flags dishes over their food cost target. Sold on the Microsoft Store.</p>
+      <div class="button-row"><a class="button button-store" href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-menu-price" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 13h7.5v7L3 19zM12 13h9v8l-9-1.3z"/></svg>Try it in the Microsoft Store</a></div>
+    </div>
+  </div>
+</section>
+<section class="block soft calc-faq-wrap">
+  <div class="container narrow prose calc-faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>How do I price a menu item from food cost?</summary><p>Divide the plate cost by your target food cost %. Then round up to a price that keeps the food cost at or under the target.</p></details>
+    <details><summary>What food cost % should I target?</summary><p>Vendor guides commonly cite 28% to 35% of the menu price. Use the target you already use, or test one target on a few dishes and compare the results.</p></details>
+    <details><summary>Why round up?</summary><p>Rounding up keeps the food cost at or under the target. Rounding down pushes it over the target.</p></details>
+    <details><summary>Does the calculator include sales tax?</summary><p>No. Enter menu prices before tax.</p></details>
+    <details><summary>What if my plate cost is zero?</summary><p>The calculator needs a plate cost above $0 to set a price. Add the ingredient costs first, using the food cost calculator.</p></details>
+    <details><summary>What is the difference between food cost % and profit per plate?</summary><p>Food cost % is plate cost as a share of the price. Profit per plate is the price minus plate cost. At the same price, a lower food cost % means more profit per plate.</p></details>
+    <details><summary>Does ClearDesk IQ Restaurant Edition track this?</summary><p>The Restaurant Edition shows each dish with its plate cost, food cost % and profit per plate, ranks dishes by profit per plate and flags dishes over their food cost target.</p></details>
+    <details><summary>Are the numbers I type stored or sent?</summary><p>No. The page runs in your browser. Nothing you type is stored or sent.</p></details>
+  </div>
+</section>
+<section class="block tight calc-related">
+  <div class="container">
+    <p class="small"><strong>Related free calculators:</strong> <a href="food-cost-calculator.html">Food cost per plate calculator</a> &middot; <a href="food-truck-break-even-calculator.html">Food truck break-even calculator</a> &middot; <a href="prime-cost-calculator.html">Prime cost calculator</a> &middot; <a href="calculators/index.html">All free calculators</a></p>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I price a menu item from food cost?","acceptedAnswer":{"@type":"Answer","text":"Divide the plate cost by your target food cost %. Then round up to a price that keeps the food cost at or under the target."}},{"@type":"Question","name":"What food cost % should I target?","acceptedAnswer":{"@type":"Answer","text":"Vendor guides commonly cite 28% to 35% of the menu price. Use the target you already use, or test one target on a few dishes and compare the results."}},{"@type":"Question","name":"Why round up?","acceptedAnswer":{"@type":"Answer","text":"Rounding up keeps the food cost at or under the target. Rounding down pushes it over the target."}},{"@type":"Question","name":"Does the calculator include sales tax?","acceptedAnswer":{"@type":"Answer","text":"No. Enter menu prices before tax."}},{"@type":"Question","name":"What if my plate cost is zero?","acceptedAnswer":{"@type":"Answer","text":"The calculator needs a plate cost above $0 to set a price. Add the ingredient costs first, using the food cost calculator."}},{"@type":"Question","name":"What is the difference between food cost % and profit per plate?","acceptedAnswer":{"@type":"Answer","text":"Food cost % is plate cost as a share of the price. Profit per plate is the price minus plate cost. At the same price, a lower food cost % means more profit per plate."}},{"@type":"Question","name":"Does ClearDesk IQ Restaurant Edition track this?","acceptedAnswer":{"@type":"Answer","text":"The Restaurant Edition shows each dish with its plate cost, food cost % and profit per plate, ranks dishes by profit per plate and flags dishes over their food cost target."}},{"@type":"Question","name":"Are the numbers I type stored or sent?","acceptedAnswer":{"@type":"Answer","text":"No. The page runs in your browser. Nothing you type is stored or sent."}}]}</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><img src="favicon.svg" width="34" height="34" alt="">ClearDesk IQ</p>
+        <p>Run your small business from one place. A business money-and-time tool: a complete business management system. One payment. No monthly fees.</p>
+        <p class="small" style="color:#9fb4c7">For contractors: Windows 10 and 11 &middot; $79.99 one time on the Microsoft Store<br>Restaurant Edition: on the Microsoft Store</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="contractors/index.html">For contractors</a></li>
+          <li><a href="restaurants/index.html">For restaurants</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="calculators/index.html">All free calculators</a></li>
+          <li><a href="markup-vs-margin-calculator.html">Free markup vs margin calculator</a></li>
+          <li><a href="food-cost-calculator.html">Free food cost calculator</a></li>
+          <li><a href="prime-cost-calculator.html">Free prime cost calculator</a></li>
+          <li><a href="job-profitability-calculator.html">Free job profitability calculator</a></li>
+          <li><a href="estimate-vs-actual-job-profit-calculator.html">Free estimate vs actual job cost calculator</a></li>
+          <li><a href="change-order-price-calculator.html">Free change order pricing calculator</a></li>
+          <li><a href="contractor-hourly-rate-calculator.html">Free contractor hourly rate calculator</a></li>
+          <li><a href="food-truck-break-even-calculator.html">Free food truck break-even calculator</a></li>
+          <li><a href="menu-price-calculator.html">Free menu price calculator</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <h2>Help</h2>
+        <ul>
+          <li><a href="help/index.html">Help center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact &amp; support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PFG9FDW352B?cid=rest-calc-menu-price" rel="noopener">Get it on the Microsoft Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-fine">ClearDesk IQ helps you run the business side of your work. It is not tax, legal or accounting advice. Screens show fictional example data. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies. &copy; 2026 ClearDesk IQ.</p>
+  </div>
+</footer>
+<script src="assets/js/calc-wave1.js" defer></script>
+</body>
+</html>
