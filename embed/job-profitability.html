@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Job profitability calculator | ClearDesk IQ</title>
+<meta name="description" content="Free job profitability calculator: profit, job margin, overhead and the price for a target margin. Runs in your browser.">
+<link rel="canonical" href="https://cleardeskiq.com/job-profitability-calculator.html">
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:#16222e;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body{padding:14px}
+.embed{max-width:760px;margin:0 auto}
+h1{font-size:1.2rem;line-height:1.3;margin:0 0 6px;color:#10273f}
+.intro{margin:0 0 12px;font-size:.92rem;color:#3f4d5a}
+.card{border:1px solid #d5dde5;border-radius:10px;padding:14px;margin:0 0 12px;background:#fff}
+.fields{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:480px){.fields{grid-template-columns:1fr 1fr}.fields .wide{grid-column:1/-1}}
+.field{min-width:0}
+.field label{display:block;font-size:.88rem;font-weight:600;margin:0 0 4px}
+.field input{display:block;width:100%;min-width:0;font:inherit;padding:8px 10px;border:1px solid #9aa8b5;border-radius:6px;background:#fff;color:#16222e}
+.field input:focus{outline:3px solid #9cc4ff;outline-offset:1px}
+.result-big{font-size:1.8rem;font-weight:700;line-height:1.2;margin:2px 0 6px;color:#10273f}
+.result-big.is-good{color:#1d6b35}.result-big.is-warn{color:#8a5a00}.result-big.is-bad{color:#a11d1d}
+.flag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.85rem;font-weight:600;background:#eef2f6;color:#16222e}
+.flag.good{background:#e3f4e8;color:#1d6b35}.flag.thin{background:#fff1d6;color:#7a5000}.flag.bad{background:#fde3e3;color:#a11d1d}
+.result-list{list-style:none;margin:10px 0 0;padding:0}
+.result-list li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-top:1px solid #e6ecf1;font-size:.95rem}
+.result-list strong{text-align:right;overflow-wrap:anywhere}
+.msg-list{margin:8px 0 0;padding-left:18px;color:#a11d1d;font-size:.9rem}
+.small{font-size:.84rem;color:#3f4d5a;margin:8px 0 0}
+.credit{font-size:.88rem;color:#3f4d5a;margin:12px 0 0;text-align:right}
+.credit a{color:#10273f}
+</style>
+</head>
+<body>
+<main class="embed">
+<h1>Job profitability calculator</h1>
+<p class="intro">Enter the price and your job costs. The calculator shows the profit, the job margin and the price your target margin needs. Example numbers are fictional.</p>
+<form id="jpf-form" onsubmit="return false">
+  <div class="card"><div class="fields">
+<div class="field"><label for="jpf-price">Price you charge the customer ($)</label><input id="jpf-price" type="number" inputmode="decimal" min="0" step="any" value="18500"></div>
+<div class="field"><label for="jpf-materials">Materials ($)</label><input id="jpf-materials" type="number" inputmode="decimal" min="0" step="any" value="7200"></div>
+<div class="field"><label for="jpf-subs">Subcontractors ($)</label><input id="jpf-subs" type="number" inputmode="decimal" min="0" step="any" value="4200"></div>
+<div class="field"><label for="jpf-hours">Labor hours</label><input id="jpf-hours" type="number" inputmode="decimal" min="0" step="any" value="60"></div>
+<div class="field"><label for="jpf-rate">Labor cost per hour ($)</label><input id="jpf-rate" type="number" inputmode="decimal" min="0" step="any" value="55"></div>
+<div class="field"><label for="jpf-other">Other job costs ($)</label><input id="jpf-other" type="number" inputmode="decimal" min="0" step="any" value="350"></div>
+<div class="field"><label for="jpf-overhead">Overhead (% of direct costs)</label><input id="jpf-overhead" type="number" inputmode="decimal" min="0" step="any" value="10"></div>
+<div class="field"><label for="jpf-target">Target margin (%)</label><input id="jpf-target" type="number" inputmode="decimal" min="0" step="any" value="20"></div>
+  </div></div>
+  <div class="card" aria-live="polite">
+    <p class="small" style="margin:0">Profit</p>
+    <p class="result-big is-warn" id="jpf-profit">$1,945</p>
+    <p style="margin:0 0 4px"><span class="flag thin" id="jpf-flag">Thin</span> &nbsp;Margin <strong id="jpf-margin">10.5%</strong></p>
+    <ul class="result-list">
+      <li><span>Labor (hours &times; rate)</span><strong id="jpf-labor">$3,300</strong></li>
+      <li><span>Direct costs</span><strong id="jpf-direct">$15,050</strong></li>
+      <li><span>Overhead</span><strong id="jpf-oh">$1,505</strong></li>
+      <li><span>Total cost</span><strong id="jpf-total">$16,555</strong></li>
+      <li><span>Price for your target margin</span><strong id="jpf-needed">$20,694</strong></li>
+    </ul>
+  </div>
+</form>
+<p class="small">Estimates only, from the numbers you enter. Not tax, legal or accounting advice.</p>
+<p class="credit">Free calculator by <a href="https://cleardeskiq.com/job-profitability-calculator.html" target="_blank" rel="noopener">ClearDesk IQ</a></p>
+</main>
+<script>
+/* ClearDesk IQ free calculators (2026-11-07). Runs in the browser. Nothing you type is stored or sent.
+   Same rules as the job profit calculator: overhead is a percent of direct costs,
+   margin = profit / price, price for a target margin = total cost / (1 - target).
+   Pages: job-profitability-calculator.html (ids jpf-*) and the homepage job check (ids hjp-*). */
+(function () {
+  'use strict';
+  var TARGET_MAX = 95; // at or above this a target price is not defined
+
+  function status(price, marginPct, targetPct) {
+    if (!(price > 0)) return 'Enter a price';
+    if (marginPct < 10) return 'Underpriced';      // under 10% or a loss
+    if (marginPct >= targetPct) return 'Healthy';   // at or above target
+    return 'Thin';                                  // at least 10%, under target
+  }
+  function priceForTarget(cost, targetPct) {
+    if (!(targetPct < TARGET_MAX)) return NaN;
+    return cost / (1 - targetPct / 100);
+  }
+
+  // i: { price, materials, subs, other, hours, rate, overheadPct, targetPct }
+  function jobProfitability(i) {
+    var labor = i.hours * i.rate;
+    var direct = i.materials + i.subs + i.other + labor;
+    var overhead = direct * i.overheadPct / 100;
+    var total = direct + overhead;
+    var profit = i.price - total;
+    var marginPct = i.price > 0 ? profit / i.price * 100 : NaN;
+    return {
+      labor: labor, direct: direct, overhead: overhead, total: total, profit: profit,
+      marginPct: marginPct, needed: priceForTarget(total, i.targetPct),
+      status: status(i.price, marginPct, i.targetPct)
+    };
+  }
+
+  // i: { price, cost, targetPct }
+  function jobMargin(i) {
+    var profit = i.price - i.cost;
+    var marginPct = i.price > 0 ? profit / i.price * 100 : NaN;
+    var markupPct = i.cost > 0 ? profit / i.cost * 100 : NaN;
+    var needed = priceForTarget(i.cost, i.targetPct);
+    var increase = isFinite(needed) ? Math.max(0, needed - i.price) : NaN;
+    return {
+      profit: profit, marginPct: marginPct, markupPct: markupPct, needed: needed,
+      increase: increase, status: status(i.price, marginPct, i.targetPct)
+    };
+  }
+
+  var api = { jobProfitability: jobProfitability, jobMargin: jobMargin, status: status, priceForTarget: priceForTarget };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+
+  // ---- page wiring (browser only)
+  if (typeof document === 'undefined') return;
+  var reduceMotion = typeof window !== 'undefined' && window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function num(id) {
+    var el = document.getElementById(id);
+    var v = el ? parseFloat(el.value) : NaN;
+    return isFinite(v) && v >= 0 ? v : 0;
+  }
+  function money(n) {
+    if (!isFinite(n)) return 'n/a';
+    var r = Math.round(Math.abs(n)).toLocaleString('en-US');
+    return (n < 0 && Math.round(n) !== 0 ? '-$' : '$') + r;
+  }
+  function pct(n) { if (!isFinite(n)) return 'n/a'; var a = Math.round(Math.abs(n) * 10 + 1e-9) / 10; return (n < 0 && a > 0 ? '-' : '') + a.toFixed(1) + '%'; }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function flag(id, st) {
+    var el = document.getElementById(id); if (!el) return;
+    el.textContent = st;
+    el.className = 'flag ' + ({ 'Healthy': 'good', 'Thin': 'thin', 'Underpriced': 'bad' }[st] || '');
+  }
+  // Result colour by status: green at or above target, amber for Thin, red for Underpriced; none when no price.
+  function tone(id, st) {
+    var el = document.getElementById(id); if (!el) return;
+    el.className = 'result-big' + ({ 'Healthy': ' is-good', 'Thin': ' is-warn', 'Underpriced': ' is-bad' }[st] || '');
+  }
+  var shown = {};
+  // 400 ms count to the new profit; instant when reduced motion is on or no animation frames exist.
+  function showProfit(id, value) {
+    var el = document.getElementById(id); if (!el) return;
+    var from = shown.hasOwnProperty(id) ? shown[id] : value;
+    shown[id] = value;
+    if (reduceMotion || typeof requestAnimationFrame !== 'function' || from === value) { el.textContent = money(value); return; }
+    var start = null;
+    function step(t) {
+      if (start === null) start = t;
+      var k = Math.min(1, (t - start) / 400);
+      el.textContent = money(from + (value - from) * k);
+      if (k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // p = id prefix: 'jpf' (full calculator) or 'hjp' (homepage check). Missing fields count as 0.
+  function runProfit(p, animate) {
+    var targetPct = num(p + '-target');
+    var r = jobProfitability({
+      price: num(p + '-price'), materials: num(p + '-materials'), subs: num(p + '-subs'), other: num(p + '-other'),
+      hours: num(p + '-hours'), rate: num(p + '-rate'), overheadPct: num(p + '-overhead'), targetPct: targetPct
+    });
+    if (animate) showProfit(p + '-profit', r.profit); else set(p + '-profit', money(r.profit));
+    tone(p + '-profit', r.status);
+    set(p + '-margin', pct(r.marginPct));
+    flag(p + '-flag', r.status);
+    set(p + '-labor', money(r.labor));
+    set(p + '-direct', money(r.direct));
+    set(p + '-oh', money(r.overhead));
+    set(p + '-total', money(r.total));
+    set(p + '-needed', targetPct < TARGET_MAX ? money(Math.ceil(r.needed - 1e-9)) : 'Set a target under 95%');
+    if (p === 'jpf') set('jpf-cta', jobCta(r));
+  }
+
+  function jobCta(r) {
+    if (!isFinite(r.marginPct)) return 'Enter a price to see what the job keeps.';
+    return r.profit >= 0
+      ? 'This job kept ' + money(r.profit) + ' (' + pct(r.marginPct) + ' margin). ClearDesk IQ tracks profit and margin for every job you run in the app.'
+      : 'At these costs this job loses ' + money(-r.profit) + '. ClearDesk IQ tracks profit and margin for every job you run in the app.';
+  }
+
+  function bind(formId, fn) {
+    var f = document.getElementById(formId); if (!f) return;
+    f.addEventListener('input', fn); fn();
+  }
+  bind('jpf-form', function () { runProfit('jpf', false); });
+  bind('hjp-form', function () { runProfit('hjp', true); });
+})();
+
+</script>
+</body>
+</html>
